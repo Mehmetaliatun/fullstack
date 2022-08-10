@@ -1,0 +1,16 @@
+<html>
+
+	<head>
+		<title>Kristal Gazinosu</title>
+	
+	</head>			
+
+	<body>
+		<h1>Pavyona hoşgeldiniz</h1>
+		<p>Tarlaları hazırlayın</p>
+
+	</body>		
+
+
+
+</html>
