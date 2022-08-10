@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <link rel="stylesheet" href="list.css">
+
+<style>
+    
+    ul{
+        /* padding-left: 5px; */
+        /* list-style: none; */
+    }
+    
+    .item{
+        /* list-style-type: georgian; */
+        /* list-style-position: inside; */
+        /* list-style-type: "✈" ; */
+        list-style-image: url(./img/rocket.png);
+        
+    }
+
+    li::before{
+        /* content:"\2764" ;
+        color: red;
+        padding-right: 10px; */
+    }
+
+    ol{
+        list-style-type: none;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    ol li{
+        border: 1px solid darkgoldenrod;
+        border-radius: 25px;
+        margin: 10px;
+        padding-left: 1rem;
+        background-color: darkorchid;
+        border-left: 7px solid darkmagenta;
+        color: gold;
+        width: 15rem;
+        /* display: inline-block; */
+    }
+
+</style>
+
+</head>
+<body>
+
+        <ul>
+            <li class="item item1">item1</li>
+            <li class="item item2">item2</li>
+            <li class="item item3">item3</li>
+            <li class="item item4">item4</li>
+        </ul>
+
+        <ol>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+        </ol>
+    
+    
+</body>
+</html>
