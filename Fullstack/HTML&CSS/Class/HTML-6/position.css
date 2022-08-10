@@ -1,25 +1,36 @@
 .main{
     width: 100;
     background-color: rgba(87, 227, 227, 0.767);
-    height: 1000px;
+    height: 2000px;
     margin: 30px;
     padding: 5px;
     position: relative;
+    margin-top:50px;
 }
 
 .box1{
 width: 100px;
+/* margin: auto; */
+/* border-radius: 20px; */
 height: 100px;
 background-color: rgba(0, 0, 255, 0.836);
+/* position: fixed; */
+position: relative;
+top: 0;
+left: 0px;
+z-index: 1;
 }
 .box2{
 width: 100px;
 height: 100px;
-background-color: rgba(5, 85, 12, 0.671);
+background-color: rgba(229, 241, 57, 0.671);
 position: relative;
+bottom: 20px;
 /* position: relative;
 top: 20px;
 left: 30px; */
+left: 30px;
+z-index: 2;
 }
 
 .box3{
@@ -28,9 +39,11 @@ height: 100px;
 background-color: rgba(209, 17, 145, 0.733);
 /* position: absolute;
 /* top: 20px; */
-top: 20px;
-left: 80px;
-
+/* top: 65px; */
+bottom: 65px;
+left: 0;
+position: relative;
+z-index: 4;
 }
 
 #icerde{
@@ -43,4 +56,22 @@ left: 80px;
     bottom: 0;
     right: 0;
 
+}
+#icerde2{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(199, 235, 41);
+    font-size: .5rem;
+    position: absolute;
+    color: rgb(44, 35, 156);
+    bottom: 0;
+    left: 0;
+
+}
+#paragraf{
+    position: fixed;
+    background-color: cornflowerblue;
+    top: 0px;
+    left: 0;
+    z-index: 5;
 }
