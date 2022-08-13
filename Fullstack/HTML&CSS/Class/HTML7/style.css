@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+}
+body{
+    height: 100vh;
+    background-color: cornflowerblue;
+}
+.abs{
+    background-color: green;
+    width: 10cm;
+}
+
+.div2{
+    background-color: red;
+    width: 50%;
+    height: 50%;
+}
+
+.div3{
+    background-color: yellow;
+    width: 50%;
+    height: 50vh;
+}
+.div4{
+    background-color: darkmagenta;
+    width: 50vw;
+}
