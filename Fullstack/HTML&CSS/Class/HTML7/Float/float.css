@@ -13,6 +13,7 @@ header{
 main{
     background-color: skyblue;
     padding: 5px;
+    /* overflow: auto; */
 }
 aside{
     background-color: darkorange;
@@ -20,13 +21,25 @@ aside{
     height: 300px;
     float: left;
     margin-left: 20px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 article{
     background-color: greenyellow;
     width: 70%;
     height: 300px;
+    float: left;
 }
 footer{
     background-color: coral;
+}
+/* .clear{
     clear: both;
+    border: none;
+} */
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: block;
 }
