@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans';
+}
+
+/**NAV-TOP*/
+nav.nav-top {
+    background-image: linear-gradient(to right, green, blue);
+}
+nav.nav-top img {
+    width: 45px;
+    padding: .5rem;
+    border: 1px solid red;
+    outline-style: outset;
+    outline-color: red;
+    outline-offset: .2rem;
+    margin-left: .5rem;
+    margin-top: .5rem;
+}
+.nav-top .sign-in{
+    float: right;
+    margin: 1.5rem 1rem;
+    color: white;
+    font-weight: 700;
+    /* vertical-align:auto; */
+}
+.nav-top .sign-in a{
+    color: white;
+    text-decoration: none;
+}
+.nav-top .sign-in a:hover{
+    color: black;
+    transition: 200ms;
+}
+.clearfix{
+    clear: both;
+}
+/** NAV MAIN*/
+nav.nav-main{
+    background-color: orange;
+    padding: 2rem;
+    text-align: center;
+    font-family: "DynaPuff", cursive;
+    font-weight: 500;
+    position:sticky;
+    width: 100%;
+    top: 0;
+}
+nav.nav-main a{
+    color: black;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+nav.nav-main a:hover{
+    color: white;
+    transition: 300ms;
+}
+
+main p{
+    margin: 1rem;
+    text-align: justify;
+}
+.slack {
+    position: fixed;
+    /* float: right; */
+    bottom: 2rem;
+    right: 3rem;
+    background-color: red;
+    font-size: 2rem;
+    color: black;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0.15rem;
+}
+.slack a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.slack a:hover{
+    color: white;
+    transition: 300ms;
+}
