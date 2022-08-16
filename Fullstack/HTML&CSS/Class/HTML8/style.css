@@ -28,8 +28,18 @@ h1 + p {
 }
 
 /** General Sibling Selector*/
-/*! ~ > yapımı ctrl + alt + enter üstündeki tuş  h1 elementinden sonraki tüm p elementlerini seçer*/
+/*! ~ > yapımı ctrl + alt + enter üstündeki tuş  h1 elementinden sonraki tüm p elementlerini seçer (aynı parent olması gerekiyor)*/
 
 h1 ~ p {
     color: hotpink;
+}
+h3{
+    margin:1rem auto;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid blue;
+    outline: 3px solid red;
+    outline-offset: 10px;
+    border-radius: 50%;
+    text-align: center;
 }
