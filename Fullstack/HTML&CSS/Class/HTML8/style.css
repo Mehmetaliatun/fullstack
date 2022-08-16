@@ -1,0 +1,35 @@
+/**? COMBINATORS */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/** Descented Selector*/
+/*! box class içindeki tüm p'leri seç */
+
+/* .box p {
+    color: red;
+} */
+
+/** Child Selector ">" */
+/*! parent box class olan tüm p'leri seç */
+
+/* .box > p {
+    color: green;
+} */
+
+/** Adjacent Sibling */
+/*! h1 elementi kapandıktan sonraki ilk p elementini seçer */
+
+h1 + p {
+    color: aqua;
+}
+
+/** General Sibling Selector*/
+/*! ~ > yapımı ctrl + alt + enter üstündeki tuş  h1 elementinden sonraki tüm p elementlerini seçer*/
+
+h1 ~ p {
+    color: hotpink;
+}
