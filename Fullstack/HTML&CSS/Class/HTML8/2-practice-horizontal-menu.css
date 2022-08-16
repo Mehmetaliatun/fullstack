@@ -1,0 +1,30 @@
+
+body {
+   font-family: 'Coming Soon', cursive;
+    /* text-align: center; */
+}
+
+nav.horizontal-menu a {
+    text-decoration: none;
+    color: white;
+}
+nav.horizontal-menu ul{
+    list-style-type: none;
+    text-align: center;
+}
+nav.horizontal-menu ul li{
+    display: inline-block;
+    background-color: wheat;
+    padding: 1rem 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    width: 4rem;
+    border-radius: 1rem;
+}
+nav.horizontal-menu ul li:hover{
+    background-color: coral;
+    cursor: pointer;
+}
+nav.horizontal-menu ul li:hover a{
+    color: black;
+}
