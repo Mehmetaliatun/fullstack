@@ -30,3 +30,17 @@ nav.horizontal-menu ul li:hover a{
 }
 
 /** Pop-up Menu*/
+
+nav.popup-menu {
+    border: 1px solid red;
+    width: 10rem;
+}
+nav.popup-menu ul{
+    display: none;
+}
+nav.popup-menu .fa-bars:active{
+    opacity: 0.5;
+}
+nav.popup-menu:hover ul{
+    display: block;
+}
