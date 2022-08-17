@@ -67,18 +67,19 @@ console.log("****** FOR *******");
 
 //? kullanıcıdan alınan sayıyı bir eksiğine kadar böl  eğer işlemlerden birinde sonuç 0 olursa asal false olur ve sayı asal değildir sonucunu çıkarır
 
-const number = Number(prompt("Enter a positive number:"));
-let asal = true;
+//* const number = Number(prompt("Enter a positive number:"));
+//* let asal = true;
 
-if (number <=0 ) {
-    alert("The number should bigger than 0.");
-}else {
-    for(let i=2 ; i<number ; i++){
-        if(number % i === 0){
-            asal = false;
-            break;
-        }
-    }
-    const result = asal === true ? "Asaldir" : "Asal değildir"
-    console.log(`${number} ${result}`);
-}
+//* if (number <=0 ) {
+//* alert("The number should bigger than 0.");
+//* }else {
+//* for(let i=2 ; i<number ; i++){
+//* if(number % i === 0){
+//* asal = false;
+//* break;
+//* }
+//* }
+//* const result = asal === true ? "Asaldir" : "Asal değildir"
+//* console.log(`${number} ${result}`);
+//* }
+
