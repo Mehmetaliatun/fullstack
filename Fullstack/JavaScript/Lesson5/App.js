@@ -33,20 +33,20 @@ console.log("****** FOR *******");
 //     console.log(`${i}-Merhaba`);
 // }
 
-// const n=Number(prompt("Enter a number:"))
+//? const n=Number(prompt("Enter a number:"))
 
-// let toplam = 0 
-// for(let i = 1; i <= n; i++){
-//     toplam += i;
-// }
-// console.log("SONUC", toplam);
+//? let toplam = 0 
+//? for(let i = 1; i <= n; i++){
+//?     toplam += i;
+//? }
+//? console.log("SONUC", toplam);
 
-// let n = +prompt("Enter a number:");
-// let sum = 0;
-// for ( let i = 1 ; i <= n ; i++){
-//     sum += i;
-// }
-// console.log(sum);
+//? let n = +prompt("Enter a number:");
+//? let sum = 0;
+//? for ( let i = 1 ; i <= n ; i++){
+//?     sum += i;
+//? }
+//? console.log(sum);
 
 //* EXP- 0-100 arasinda 10 adet tam rastgele sayi ureten kodu for dongusu 
 //* ile yaziniz
@@ -57,18 +57,20 @@ console.log("****** FOR *******");
 //* Math.round() => degerine gore yuvarlar.
 //* Math.trunc() => kesirli sayinin tam kismini alir.
 
-// for(let i=1; i<=10; i++){
-//     const random =Math.round(Math.random() *100);
-//     console.log(random);
-// }
+//* for(let i=1; i<=10; i++){
+//*    const random =Math.round(Math.random() *100);
+//*     console.log(random);
+//* }
 
 //? ÖRNEK: Girilen bir sayinin Asal olup olmadigini yazdiran kodu
 //? for dongulerini kullanarak yaziniz.
 
-const number = Number+prompt("Enter a positive number:");
+//? kullanıcıdan alınan sayıyı bir eksiğine kadar böl  eğer işlemlerden birinde sonuç 0 olursa asal false olur ve sayı asal değildir sonucunu çıkarır
+
+const number = Number(prompt("Enter a positive number:"));
 let asal = true;
 
-if(number<=0){
+if (number <=0 ) {
     alert("The number should bigger than 0.");
 }else {
     for(let i=2 ; i<number ; i++){
@@ -77,4 +79,6 @@ if(number<=0){
             break;
         }
     }
+    const result = asal === true ? "Asaldir" : "Asal değildir"
+    console.log(`${number} ${result}`);
 }
