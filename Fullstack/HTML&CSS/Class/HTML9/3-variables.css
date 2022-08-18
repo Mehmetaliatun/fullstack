@@ -1,0 +1,24 @@
+@import "theme.css";
+
+body {
+  font-family: var(--ff-open-sans);
+}
+
+h1 {
+  font-family: var(--ff-dyna);
+  color: var(--Yaban-Hayatı-1-hex);
+}
+
+div {
+  box-shadow: var(--koyu-golge);
+  width: 50vw;
+  margin: 1rem auto;
+  max-width: 600px;
+  min-width: 400px;
+}
+
+p {
+  background-color: var(--Yaban-Hayatı-3-hex);
+  color: var(--Yaban-Hayatı-5-hex);
+  font-weight: 400;
+}

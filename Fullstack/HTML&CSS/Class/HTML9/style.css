@@ -1,55 +1,54 @@
-.yazi{
-    text-align: center;
-    font-size: 2rem;
-    margin: 2rem auto;
-    width: 50vw;
+.yazi {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem auto;
+  width: 50vw;
 }
 
 /************ ROTATE **************/
 
-
-.yazi1{
-    background-color: yellow;
-    transform: rotateX(180deg);
-    /** 90 ve 270 derecelerde yazılar tam dik olduklarından ve 3-boyutlu olarak bakamadığımız için gözükmezler */
+.yazi1 {
+  background-color: yellow;
+  transform: rotateX(180deg);
+  /** 90 ve 270 derecelerde yazılar tam dik olduklarından ve 3-boyutlu olarak bakamadığımız için gözükmezler */
 }
 
-.yazi2{
-    background-color: hotpink;
-    transform: rotateY(180deg);
-    /** Bu açı mirror olarak geçer */
+.yazi2 {
+  background-color: hotpink;
+  transform: rotateY(180deg);
+  /** Bu açı mirror olarak geçer */
 }
-.yazi3{
-    background-color: fuchsia;
-    transform: rotate(-45deg);
+.yazi3 {
+  background-color: fuchsia;
+  transform: rotate(-45deg);
 }
-.yazi3:hover{
-    transform: scale(2);
-    transition: 600ms;
+.yazi3:hover {
+  transform: scale(2);
+  transition: 600ms;
 }
 
 /*************** SCALE ************/
 
-.yazi4{
-    background-color: darkcyan;
-   transform: scaleX(1.5);
+.yazi4 {
+  background-color: darkcyan;
+  transform: scaleX(1.5);
 }
-.yazi5{
-    background-color: green;
-    /* transform: scaleY(1.5); */
+.yazi5 {
+  background-color: green;
+  /* transform: scaleY(1.5); */
 }
-.yazi5:active{
-    transform: scale(98%);
+.yazi5:active {
+  transform: scale(98%);
 }
 /*************** TRANSLATE - TRANSITION ************/
-.translate{
-    background-color: gold;
-    font-weight: 800;
-    font-size: 1.1rem;
-    width: 100px;
-    height: 50px;
-    margin: 10px;
-    transition: background-color 1s, transform 2s;
+.translate {
+  background-color: gold;
+  font-weight: 800;
+  font-size: 1.1rem;
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  transition: background-color 1s, transform 2s;
 }
 
 /* .x:hover{
@@ -57,36 +56,36 @@
     background-color: chocolate;
 } */
 .x:hover {
-    transform: translateX(150px) rotate(360deg) scale(10%, 10%);
-    background-color: red;
-  }
-.y:active{
-    transform: translateY(20px);
-    background-color: red;
+  transform: translateX(150px) rotate(360deg) scale(10%, 10%);
+  background-color: red;
 }
-.xy:active{
-    transform: translate(50px, 50px);
-    background-color: fuchsia;
+.y:active {
+  transform: translateY(20px);
+  background-color: red;
 }
-.btn-div{
-    text-align: center;
+.xy:active {
+  transform: translate(50px, 50px);
+  background-color: fuchsia;
 }
-
-.btn{
-    padding: 1rem;
-    width: 5rem;
-    background-color: darkgoldenrod;
-    border: none;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    transition: background-color 1s, color .5s;
-    font-weight: 800;
-}
-.btn:hover{
-    background-color: gold;
-    color: rgb(255, 255, 255);
+.btn-div {
+  text-align: center;
 }
 
-.btn:active{
-    transform: scale(98%);
+.btn {
+  padding: 1rem;
+  width: 5rem;
+  background-color: darkgoldenrod;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: background-color 1s, color 0.5s;
+  font-weight: 800;
+}
+.btn:hover {
+  background-color: gold;
+  color: rgb(255, 255, 255);
+}
+
+.btn:active {
+  transform: scale(98%);
 }
