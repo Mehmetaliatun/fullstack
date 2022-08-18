@@ -1,5 +1,44 @@
+.yazi{
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem auto;
+    width: 50vw;
+}
+
 /************ ROTATE **************/
+
+
+.yazi1{
+    background-color: yellow;
+    transform: rotateX(180deg);
+    /** 90 ve 270 derecelerde yazılar tam dik olduklarından ve 3-boyutlu olarak bakamadığımız için gözükmezler */
+}
+
+.yazi2{
+    background-color: hotpink;
+    transform: rotateY(180deg);
+    /** Bu açı mirror olarak geçer */
+}
+.yazi3{
+    background-color: fuchsia;
+    transform: rotate(-45deg);
+}
+.yazi3:hover{
+    transform: scale(2);
+    transition: 600ms;
+}
 
 /*************** SCALE ************/
 
+.yazi4{
+    background-color: darkcyan;
+   transform: scaleX(1.5);
+}
+.yazi5{
+    background-color: green;
+    /* transform: scaleY(1.5); */
+}
+.yazi5:active{
+    transform: scale(98%);
+}
 /*************** TRANSLATE - TRANSITION ************/
