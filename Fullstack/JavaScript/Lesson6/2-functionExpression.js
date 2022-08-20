@@ -41,7 +41,7 @@ const buyukBul = function (n1, n2, n3 = -Number.MAX_VALUE) {
 console.log("Girilen sayilarin en buyugu:", buyukBul(-1, -9, 7));
 console.log("Girilen sayilarin en buyugu:", buyukBul(-1, -9));
 
-//* Ornek: Bir fonk. icerisinde baska fonksiyojnlar cagrilabilir.
+//* Ornek: Bir fonk. icerisinde baska fonksiyonlar cagrilabilir.
 
 const hesapla = function (s1, s2, islem) {
   let sonuc = 0;
