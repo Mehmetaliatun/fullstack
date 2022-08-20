@@ -19,22 +19,27 @@
 //*   değilse
 //*       print(üzgünüz)
 
-let hak = 5;
-const random = Math.round(Math.random() * 100);
-console.log(random);
-do{
-    const guess =Number(prompt("Guess random number between 0-100:"));
+let guess;
+let cont;
+do {
+  let hak = 5;
+  const random = Math.round(Math.random() * 100);
+  console.log(random);
+  do {
+    guess = Number(prompt("Guess random number between 0-100:"));
     hak -= 1;
-    if (guess === random){
-        console.log(`Congratulations, you knew about the ${5 - hak}. one.`);
-        break;
-    }else if(guess < random){
-        console.log("Increase your guess ⬆");
-    }else{
-        console.log("Decrease your guess ⬇");
+    if (guess === random) {
+      console.log(`Congratulations, you knew about the ${5 - hak}. one.`);
+      break;
+    } else if (guess < random) {
+      console.log("Increase your guess ⬆");
+    } else {
+      console.log("Decrease your guess ⬇");
     }
-}while (hak > 0);
+  } while (hak > 0);
 
-if (hak === 0){
-console.log("Hahah Looser!");
-}
+  if (guess !== random) {
+    console.log("Hahah Looser!");
+  }
+  cont = prompt("If you want to play again press `y` ");
+} while (cont === "y" || cont === "Y");
