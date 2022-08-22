@@ -103,3 +103,37 @@
 // };
 // const n = +prompt("n terimini giriniz:");
 // console.log(`FIBO (${n})= ${fibo(n)}`);
+
+//* Scope */
+
+// let sayi1 = 5;
+// console.log(sayi1);
+
+// const fonks1 = function () {
+//   sayi1 = 22;
+//   console.log(sayi1);
+// };
+// fonks1();
+
+// console.log(++sayi1);
+// console.log(sayi1);
+
+//? ----------------------------------------------
+
+let sayi2 = 7; //!Global scope
+console.log(sayi2); //! 7
+
+const fonks2 = () => {
+  let sayi2 = 11; //!Function scope
+  console.log(sayi2); //! 11
+};
+fonks2();
+console.log(sayi2); //! 7
+// console.log(sayi2);
+
+if (sayi2 === 8) {
+  let sonuc = "mrb";
+} else {
+  sonuc = "nbr";
+}
+console.log(sonuc);
