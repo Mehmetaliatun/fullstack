@@ -71,22 +71,35 @@
 
 // f(n) = f(n-1) + f(n-2)
 
-const fibo = (n) => {
-  let fib1 = 1;
-  let fib2 = 1;
-  let toplam = 0;
-  for (let i = 2; i < n; i++) {
-    toplam = fib1 + fib2;
-    fib1 = fib2;
-    fib2 = toplam;
-    console.log(toplam);
-  }
+// const fibo = (n) => {
+//   let fib1 = 1;
+//   let fib2 = 1;
+//   let toplam = 0;
+//   for (let i = 2; i < n; i++) {
+//     toplam = fib1 + fib2;
+//     fib1 = fib2;
+//     fib2 = toplam;
+//     console.log(toplam);
+//   }
+//   return fib2;
+// };
+// const n = +prompt("n terimini giriniz:");
+// if (n <= 0) {
+//   console.log("lutfen 0'dan buyuk deger giriniz");
+// } else {
+//   console.log(`FIBO(${n})=${fibo(n)}`);
+// }
 
-  return fib2;
-};
-const n = +prompt("n terimini giriniz:");
-if (n <= 0) {
-  console.log("lutfen 0'dan buyuk deger giriniz");
-} else {
-  console.log(`FIBO(${n})=${fibo(n)}`);
-}
+//*Recursive */
+
+// const fibo = (n) => {
+//   if (n <= 0) {
+//     return 0;
+//   } else if (n === 1 || n === 2) {
+//     return 1;
+//   } else {
+//     return fibo(n - 1) + fibo(n - 2);
+//   }
+// };
+// const n = +prompt("n terimini giriniz:");
+// console.log(`FIBO (${n})= ${fibo(n)}`);
