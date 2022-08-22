@@ -10,4 +10,15 @@
 // const usAl = (t, u) => t ** u;
 // console.log(usAl(2, 3));
 
-const calculate = (x, y, islem) => {};
+// let selamVer = () => "sea";
+// alert(selamVer(""));
+
+//* Orn;Silindir Hacmi
+//*** */
+
+const r = Number(prompt("yaricap giriniz:"));
+const h = Number(prompt("yukseklik giriniz:"));
+
+const hacimHesapla = (r, h) => Math.PI * r * r * h;
+// console.log(`${r},${h} => Hacmi: ${hacimHesapla(r, h).toExponential()}`);
+console.log(`${r},${h} => Hacmi: ${hacimHesapla(r, h).toFixed(2)}`);
