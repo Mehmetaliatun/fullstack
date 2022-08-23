@@ -47,3 +47,53 @@
   background-color: darkorchid;
   height: 5rem;
 }
+
+.container2 {
+  background-color: darkcyan;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+.container2 div {
+  width: 5rem;
+  background-color: darkgrey;
+  flex-grow: 1;
+  /** flex-basis item'lara ihtiyaci kadar yer tahsis ediyor veya sadece icerigin buyuklugu kadar bir uzunluk veriyor flex-basis:0;*/
+  flex-basis: 0;
+}
+div.grow2 {
+  flex-grow: 2;
+}
+div.grow3 {
+  flex-grow: 3;
+}
+div.nogrow {
+  flex-grow: 0;
+}
+/** flex-grow */
+.container3 {
+  background-color: lightblue;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 50vw;
+  padding: 0.5rem;
+}
+.container3 div {
+  background-color: hotpink;
+}
+div .div1 {
+  width: 10%;
+}
+div .div2 {
+  width: 20%;
+}
+div .div3 {
+  width: 30%;
+}
+div .div4 {
+  width: 40%;
+}
