@@ -1,0 +1,22 @@
+* {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: row; /**row default deger*/
+  /* flex-direction: row-reverse; */
+  background-color: blueviolet;
+  flex-wrap: wrap;
+  /* align-content: stretch; */
+  justify-content: space-evenly;
+}
+.container div {
+  width: 5rem;
+  height: 5rem;
+  background-color: rgb(170, 99, 19);
+  padding: 2rem;
+  margin: 1rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+}
