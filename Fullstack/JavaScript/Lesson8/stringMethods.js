@@ -200,3 +200,48 @@ let degistir2 =
   " No woman, no cry, eh";
 
 console.log(degistir2.replaceAll(/no/gi, "Hayir"));
+
+//* ----------------------------------------------------------
+//*  slice(beginIndex[, endIndex])
+//*  substring(beginIndex[, endIndex])
+//*  substr (depreceated)
+//* ----------------------------------------------------------
+const veysel = "Uzun ince bir yoldayim yuruyorum gunduz gece..";
+const sliced = veysel.slice(33);
+console.log(sliced, typeof sliced); //? gunduz gece..
+
+console.log(veysel.slice(17, 30)); //? dayim yuruyor
+console.log(veysel.slice(-10)); //? duz gece
+console.log(veysel.slice(-23, -19)); //? yuru
+
+console.log(veysel.substring(17, 30)); //? dayim yuruyor
+//! negatif indeks substring ile kullanilamaz.
+console.log(veysel.substring(-10)); //? Uzun ince bir yoldayim yuruyorum gunduz gece..
+
+//* ----------------------------------------------------------
+//*  split([sep[, limit]])
+//* ----------------------------------------------------------
+
+const tarkan = "Gel gunduzle gece olalim";
+const splited = tarkan.split(" ");
+console.log(splited, typeof splited); //! Bosluklara gore ayirarak Array'e cevirdi.
+
+const chars = tarkan.split("");
+console.log(chars); //* null karakterine göre harfleri ayırarark bir char dizisi oluşturdu.
+
+//* ----------------------------------------------------------
+//* trim();
+//* ----------------------------------------------------------
+const ramazan = "    Hoş geldin ya şehri Ramazan     ";
+console.log(ramazan);
+console.log(ramazan.length); // 36
+console.log(ramazan.trim());
+console.log(ramazan.trim().length); //27
+
+//! ODEV1: tarkan string'indeki kelimelerin sayisini donduren
+//! bir fonksiyon yaziniz.
+
+//! ODEV2:
+//! ----------------------------------------------------------
+// https://www.youtube.com/watch?v=b7vfp5G4brE
+// https://youtu.be/b7vfp5G4brE
