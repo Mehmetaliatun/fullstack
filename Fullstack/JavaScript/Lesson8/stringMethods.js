@@ -115,7 +115,7 @@ console.log(str6.length); //* 27
 console.log(str6.charAt(str6.length - 1)); //*0-26=>27 eleman 0'dan baslar
 
 //* -----------------------------------------------------
-//* includes()- case sentive
+//* includes()- case sensitive
 //* -----------------------------------------------------
 const word = "To be or not to be, that is the question";
 
@@ -126,3 +126,13 @@ console.log(word.includes("to be", 14)); //? false
 console.log(word.includes("to be", 13)); //? true
 //! NOT: case insentive kullanmak icin str baslangicta kucuk veya
 //! buyuk harfe cevirilerek arama yapilabilir.
+
+//* -----------------------------------------------------
+//* indexOf(), lastIndexOf(), case sensitive
+//* -----------------------------------------------------
+
+const toBe = word.indexOf("or");
+console.log(toBe); //? 6
+console.log(word.indexOf("be")); //? 3
+console.log(word.lastIndexOf("be")); //? 16
+console.log(word.lastIndexOf("BE")); //? -1
