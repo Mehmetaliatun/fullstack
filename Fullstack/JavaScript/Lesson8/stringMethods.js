@@ -37,5 +37,51 @@ const str5 = str1 + str2 + str3 + sayi;
 console.log(str5, typeof str5);
 
 //* ---------------------------------------------------
-//*  concat() - immutable
+//*  Concat() - immutable
 //* ---------------------------------------------------
+
+console.log(str1.concat(str2));
+console.log(str1, str2);
+
+//? assigning ile degiskenin degeri degistirilebilir.
+
+// str1 = str1.concat(str3, " Path");
+// console.log(str1); //! hata verdi. */
+
+// const myName = "Mehmet Ali";
+// console.log(myName.toUpperCase());
+// console.log(myName.toLowerCase());
+
+let yourName = "istanbul";
+// yourName = yourName.toLocaleUpperCase();
+// yourName = yourName.toLocaleUpperCase("tr");
+yourName = yourName.toLocaleUpperCase();
+console.log(yourName);
+
+const esitMi = (str1, str2) => {
+  return str1.toLocaleUpperCase() === str2.toLocaleUpperCase()
+    ? `${str1} ile ${str2} Esittir`
+    : `${str1} ile ${str2} Esit degildir`;
+};
+
+console.log(esitMi("Merhaba", "MERHABA"));
+console.log(esitMi("Hello", "Hella"));
+
+//! suslu ve return olmadan da calisir.
+// const esitMi = (str1, str2) =>
+//   str1.toLocaleUpperCase() === str2.toLocaleUpperCase()
+// ? `${str1} ile ${str2} Esittir`
+// : `${str1} ile ${str2} Esit degildir`;
+// console.log(esitMi("Merhaba", "MERHABA"));
+// console.log(esitMi("Hello", "Hella"));
+
+// Ufak bir bilgi mülakatlarda karşınıza çıkabilir
+// let str = "Mark";
+// let str2 = str; // creates a copy
+// str = "Noah";
+// console.log(str); // Noah
+// console.log(str2); // Mark immutable olduğu için değişmedi obje olsaydı değişirdi.
+
+//* -----------------------------------------------------
+//* LocaleCompare()
+//* -----------------------------------------------------
