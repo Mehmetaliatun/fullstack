@@ -152,6 +152,8 @@ console.log(word.lastIndexOf("BE")); //? -1
 // console.log(paragraph[paragraph.search(regex)]);
 // expected output: "."
 
+//! alttali ornek 120.satirda bulunan word'e gore yapildi.
+
 const buyukHarf = /[A-Z]/;
 const nokta = /[.]/;
 const virgul = /[,]/;
@@ -163,3 +165,14 @@ console.log(word.search(nokta)); //? -1
 //* startsWidth() , endsWith() - case sensitive
 //* ----------------------------------------------------------
 let word2 = "Sen gulunce guller acar gul pembe!";
+console.log(new String(word2));
+console.log(word2.startsWith("Sen")); //? true
+console.log(word2.startsWith("gulunce")); //? false
+console.log(word2.startsWith("gulunce", 4)); //? true
+console.log(word2.endsWith("!")); //? true
+console.log(word2.endsWith("r", 23)); //? true
+
+//* ----------------------------------------------------------
+//*  replace(searchFor, replaceWith) --immutable
+//* ----------------------------------------------------------
+let oku = "Oku Baban gibi, saf olma";
