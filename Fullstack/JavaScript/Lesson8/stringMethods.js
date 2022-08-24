@@ -175,4 +175,28 @@ console.log(word2.endsWith("r", 23)); //? true
 //* ----------------------------------------------------------
 //*  replace(searchFor, replaceWith) --immutable
 //* ----------------------------------------------------------
-let oku = "Oku Baban gibi, saf olma";
+let oku = "Oku Baban gibi, saf olma, saf olma";
+// console.log(oku.replace("saf olma", "basarili ol"));
+// console.log(oku);
+oku = oku.replace("saf olma", "basarili ol");
+// oku = oku.replace(/saf olma/gi, "basarili ol");
+console.log(oku);
+
+oku = oku.replace(/BASARILI/gi, "Zengin");
+console.log(oku);
+//! NOT: replace metodu eger Regex ile aksi belirtilmiyorsa (g) sadece ilk buldugunu degistirir.
+//* ----------------------------------------------------------
+//*  replaceAll() --immutable
+//* ----------------------------------------------------------
+let degistir = "daglar daglar yol ver gecem..";
+degistir = degistir.replaceAll("daglar", "Dağlar");
+console.log(degistir);
+
+//?Regex de kullanilabilir.
+let degistir2 =
+  "No woman, no cry" +
+  " No woman, no cry, eh, yeah" +
+  " Little darling, don't shed no tears" +
+  " No woman, no cry, eh";
+
+console.log(degistir2.replaceAll(/no/gi, "Hayir"));
