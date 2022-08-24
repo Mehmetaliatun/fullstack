@@ -136,3 +136,30 @@ console.log(toBe); //? 6
 console.log(word.indexOf("be")); //? 3
 console.log(word.lastIndexOf("be")); //? 16
 console.log(word.lastIndexOf("BE")); //? -1
+
+//* -----------------------------------------------------
+//* search
+//* -----------------------------------------------------
+// const paragraph =
+//   "The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?";
+
+// any character that is not a word character or whitespace
+// const regex = /[^\w\s]/g;
+
+// console.log(paragraph.search(regex));
+// expected output: 43
+
+// console.log(paragraph[paragraph.search(regex)]);
+// expected output: "."
+
+const buyukHarf = /[A-Z]/;
+const nokta = /[.]/;
+const virgul = /[,]/;
+console.log(word.search(buyukHarf)); //? ilk buyuk harfin indeksi 0
+console.log(word.search(virgul)); //?  18
+console.log(word.search(nokta)); //? -1
+
+//* ----------------------------------------------------------
+//* startsWidth() , endsWith() - case sensitive
+//* ----------------------------------------------------------
+let word2 = "Sen gulunce guller acar gul pembe!";
