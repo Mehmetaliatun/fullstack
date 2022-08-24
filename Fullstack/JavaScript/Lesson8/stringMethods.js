@@ -102,5 +102,27 @@ console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
 //* -----------------------------------------------------
 //* charAt()
 //* -----------------------------------------------------
-const str6 = "Full Stack Path";
-console.log(str6.charAt(3));
+const str6 = "Full Stack Path and DS path";
+console.log(str6.charAt(3)); //* S
+console.log(str6.charAt(4)); //* " "
+console.log(str6.charAt()); //* F (ilk indistekini dondurur)
+console.log(str6.charAt(14)); //* h
+//! lenght bir property (objenin degiskenidir)dir ver string'in
+//! karakter sayisini tutar.
+console.log(str6.length); //* 27
+
+//* String son harfini ogrenmek istersek
+console.log(str6.charAt(str6.length - 1)); //*0-26=>27 eleman 0'dan baslar
+
+//* -----------------------------------------------------
+//* includes()- case sentive
+//* -----------------------------------------------------
+const word = "To be or not to be, that is the question";
+
+console.log(word.includes("to be")); //? true
+console.log(word.includes("That")); //? false buyuk kucuk harf duyarli.
+console.log(word.includes("")); //? true
+console.log(word.includes("to be", 14)); //? false
+console.log(word.includes("to be", 13)); //? true
+//! NOT: case insentive kullanmak icin str baslangicta kucuk veya
+//! buyuk harfe cevirilerek arama yapilabilir.
