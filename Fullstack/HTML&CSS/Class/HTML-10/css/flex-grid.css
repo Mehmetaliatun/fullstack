@@ -3,7 +3,10 @@
   padding: 0;
   margin: 0;
   font-size: 1rem;
+  font-weight: 500;
   text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #354259;
 }
 .container {
   width: 100%;
@@ -11,21 +14,67 @@
 .row {
   display: flex;
   flex-wrap: wrap;
+  height: 3rem;
+}
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row3 {
+  display: flex;
+  flex-wrap: wrap;
+  height: 20rem;
+  background-color: #7fb77e;
+}
+.row4 {
+  display: flex;
+  flex-wrap: wrap;
+  height: 20rem;
+  background-color: #b1d7b4;
 }
 
 .logo {
-  background-color: aqua;
+  background-color: #f7f6dc;
+  padding: 1rem;
 }
 .menu {
-  background-color: blueviolet;
+  background-color: #ffc090;
+  padding: 1rem;
 }
 .banner {
-  background-color: chartreuse;
-  padding: 2rem;
+  background-color: #b1d7b4;
+  padding: 4rem;
+  height: 9rem;
+}
+.bol1 {
+  padding-top: 10rem;
+  border: 1px solid #f7f6dc;
+}
+.bol2 {
+  padding-top: 10rem;
+  border: 1px solid #f7f6dc;
+}
+.bol3 {
+  padding-top: 10rem;
+  border: 1px solid #f7f6dc;
+}
+.bol4 {
+  padding-top: 10rem;
+  border: 1px solid #f7f6dc;
+}
+.bol5 {
+  padding-top: 10rem;
+  border: 1px solid #f7f6dc;
+}
+.bol6 {
+  padding-top: 10rem;
+  border: 1px solid #f7f6dc;
 }
 
 .footer {
-  background-color: blue;
+  background-color: #ffc090;
+  height: 6rem;
+  padding: 3rem;
 }
 
 .col-1 {
