@@ -16,3 +16,41 @@
   background-color: darkolivegreen;
   border: 1px solid rgb(179, 144, 5);
 }
+
+.c6 {
+  /* display: flex;
+  align-items: center; */
+  justify-self: center;
+  /** itemlar bireysel olarak yatay duzlemde hizalanir */
+  width: 7rem;
+}
+.c11 {
+  align-self: center;
+  /** itemlar bireysel olarak dikey duzlemde hizalanir */
+  height: 4rem;
+}
+.c1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: chocolate;
+}
+.c4 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background-color: darkslateblue;
+}
+.c8 {
+  background-color: darksalmon;
+  /* grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 5; */
+
+  /*! grid-area: row_start / col_start / row_end / col_end */
+
+  grid-area: 3 / 2 / 5 / 4;
+}
+.c2 {
+  background-color: dodgerblue;
+  grid-area: 1 / 3 / span 2 / span 2;
+}
