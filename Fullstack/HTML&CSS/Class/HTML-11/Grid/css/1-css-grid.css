@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 1rem;
+}
+.container {
+  display: grid;
+
+  /*! Sirasiyla verilen 3 deger ile 3 adet sutun tanimlandi. */
+  grid-template-columns: 200px 40vw 20rem;
+
+  /*! Sirasiyla verilen 4 deger ile 4 adet satir tanimlandi. */
+  grid-template-rows: 100px 200px 20vh 4rem;
+
+  /** Grid seviyesinde hizalama */
+  justify-content: center;
+
+  /*! tum gridleri kendi grid alanlarina gore dikey olarak hizalar */
+  /* align-items:center ; */
+  /** center verildiginde hepsi auto height alir */
+}
+.content {
+  background-color: wheat;
+  border: 2px solid black;
+
+  /** bu kisim onemli icerigin icinde bulunanlari ortalamak icin flex yapmak gerekiyor ve sonrasinda yatay ve dikey olarak ortalama yapilir. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content7 {
+  background-image: url(https://i.medyaradar.com/2/800/600/storage/files/images/2022/08/23/fb-bm7k_cover.jpg.webp);
+  background-size: cover;
+}
+.content5 {
+  background-color: cadetblue;
+}
