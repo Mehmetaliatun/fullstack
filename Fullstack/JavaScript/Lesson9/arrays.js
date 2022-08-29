@@ -189,6 +189,15 @@ console.log(yeniArabalar1);
 //* concat()
 //*-----------------------------------------------------------
 
+const yazilar = ["Bugun", "hava", "cok", "guzel"];
+const numbersArr = [1, 2, 5, 7];
+const combinedArr = yazilar.concat(
+  numbersArr,
+  ["aslinda", "cok", "sicak"],
+  [("x", "y")]
+);
+console.log(combinedArr);
+
 //* every()
 //*-----------------------------------------------------------
 
