@@ -227,8 +227,9 @@ console.log(buyuk80);
 //? Eger hic bir eleman kosulu saglamazsa undefined dondurur.
 
 //? ornek yasi 30dan buyuk olan ilk elemani yazdirin
-const indis = yasArray.find((yas) => yas >= 30);
-console.log(indis);
+const yasIlk30 = yasArray.find((yas) => yas >= 30);
+const yasSon30 = yasArray.findLast((yas) => yas >= 30);
+console.log(yasIlk30, yasSon30);
 
 const names2 = ["Ahmet", "Can", "Mustafa", "Merve", "Can"];
 
@@ -239,3 +240,5 @@ const names2 = ["Ahmet", "Can", "Mustafa", "Merve", "Can"];
 //? Eger hic bir eleman kosulu saglamazsa -1 dondurur.
 
 //? ornek yasi 30dan buyuk olan ilk elemanin indexini yazdirin
+const foundIndex = yasArray.findIndex((yas) => yas >= 30);
+console.log(foundIndex);
