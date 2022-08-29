@@ -226,8 +226,16 @@ console.log(buyuk80);
 //? Kosulu saglayan ilk dizi elemaninin dondurur.
 //? Eger hic bir eleman kosulu saglamazsa undefined dondurur.
 
+//? ornek yasi 30dan buyuk olan ilk elemani yazdirin
+const indis = yasArray.find((yas) => yas >= 30);
+console.log(indis);
+
+const names2 = ["Ahmet", "Can", "Mustafa", "Merve", "Can"];
+
 //* findIndex()
 //*-----------------------------------------------------------
 //? Aldigi callback fonksiyonuna gore test gerceklestirir.
 //? Kosulu saglayan ilk dizi elemaninin indeksini dondurur.
 //? Eger hic bir eleman kosulu saglamazsa -1 dondurur.
+
+//? ornek yasi 30dan buyuk olan ilk elemanin indexini yazdirin
