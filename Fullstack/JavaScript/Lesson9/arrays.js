@@ -123,7 +123,20 @@ const sayilar = [2, 31, 1, 25, 7, 6, 2289, 19882];
 sayilar.sort();
 console.log(sayilar);
 
+//* sort metodu diziyi iterasyona ugratir ve parametre olark aldigi arrow
+//* fonksiyonunu dizinin her bir elemanina uygular. Bu sayede kucuk sayilar
+//* ile buyuk sayilari yer degistirerek siralama islemini gerceklestirir.
 sayilar.sort((a, b) => a - b);
 console.log(sayilar);
 sayilar.sort((a, b) => b - a);
 console.log(sayilar);
+
+//* fill()
+const array1 = [1, 2, 3, 4];
+array1.fill(0);
+console.log(array1);
+
+array1.fill(1, 2, 4);
+console.log(array1);
+array1.fill(-1, 1); //* 1.eleman ve sonrasini -1 yap
+console.log(array1);
