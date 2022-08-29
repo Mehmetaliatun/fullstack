@@ -166,6 +166,10 @@ console.log(sayilar1.lastIndexOf(2)); //? 5
 //* join()
 //*-----------------------------------------------------------
 //? join, dizinin elamanlari birlestirip string hale cevirir.
+console.log(sayilar1.join(""));
+console.log(sayilar1.join());
+console.log(sayilar1.join(" "));
+console.log(sayilar1);
 
 //* toString()
 //*-----------------------------------------------------------
