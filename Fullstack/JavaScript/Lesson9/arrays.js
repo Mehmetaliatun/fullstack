@@ -8,7 +8,7 @@ console.log("***** ARRAYS ******");
 //* ---------------------------------------------------------
 
 //! 1.yontem (Array Literal)-Tercih edilen yontem
-const names = ["Ahmet", "berkay", "mehmet", "murat"];
+const names = ["ahmet", "berkay", "mehmet", "murat"];
 
 console.log(names);
 console.log(typeof names);
@@ -112,3 +112,18 @@ console.log(arabalar);
 
 arabalar.reverse();
 console.log(arabalar);
+
+//* sort() diziyi alfabetik siralar */
+//! By default, the sort() function sorts values as strings. If numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1". Because of this, the sort() method will produce incorrect result when sorting numbers.
+
+names.sort();
+console.log(names);
+
+const sayilar = [2, 31, 1, 25, 7, 6, 2289, 19882];
+sayilar.sort();
+console.log(sayilar);
+
+sayilar.sort((a, b) => a - b);
+console.log(sayilar);
+sayilar.sort((a, b) => b - a);
+console.log(sayilar);
