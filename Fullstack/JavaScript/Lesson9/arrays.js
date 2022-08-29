@@ -154,6 +154,9 @@ console.log(sayilar1.includes("5")); //? false
 //*-----------------------------------------------------------
 //* ilk eslesen indeksi dondurur.
 
+console.log(sayilar1.indexOf(2)); //? 2
+console.log(sayilar1.lastIndexOf(2)); //? 5
+
 //! Odev: prompt ile konsoldan bir sayi istenmeli (string veya number
 //! olarak) eger bu girilen sayi, dizi icerisinde bulunuyorsa indisi
 //! (string ve number olarak ayri) yazdirilmalidir. Eger bulunamadiysa
