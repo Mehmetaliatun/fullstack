@@ -105,7 +105,10 @@ console.log(arabalar, Bmw);
 arabalar.splice(1, 0, "PossatHiglan");
 console.log(arabalar);
 
-arabalar.splice(3, 1, "Nissan");
+arabalar.splice(3, 1, "Nissan", "Egea");
 console.log(arabalar);
 
-//* Reverse */
+//* Reverse dizinin tamamini ters siraya cevirir*/
+
+arabalar.reverse();
+console.log(arabalar);
