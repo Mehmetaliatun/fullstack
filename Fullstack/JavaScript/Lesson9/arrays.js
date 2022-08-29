@@ -175,6 +175,7 @@ console.log(sayilar1);
 //*-----------------------------------------------------------
 //? toString fonksiyonu sadece dizinin elemanlarinin aralarina
 //? (virgul) koyarak birlestirir ve string yapar.
+console.log(sayilar1.toString());
 
 //* slice()
 //*-----------------------------------------------------------
