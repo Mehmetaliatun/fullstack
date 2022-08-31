@@ -84,6 +84,28 @@ console.log(products);
 //*                 FILTER METHOD
 //* ======================================================
 
+const salaries = [5500, 6500, 8000, 9000, 10001, 15000, 25000];
+//?-------------- ÖRNEK -------------------
+//? Maasi 10000'den buyuk olanlari ayri bir diziye saklayalim
+
+const bigThan = salaries.filter((s) => s > 10000);
+console.log(bigThan, salaries);
+const range = salaries.filter((s) => s >= 6000 && s <= 10000);
+console.log(range);
+
+//?-------------- ÖRNEK -------------------
+//? Maasi 9000'den az olanlara %10 zam yaparak bu degerleri
+//? yeni diziye saklayalim.
+
+const lessThan9000Increase = salaries
+  .filter((s) => s < 9000)
+  .map((s) => Math.trunc(s * 1.1));
+console.log(lessThan9000Increase);
+
+salaries
+  .filter((s) => s < 9000)
+  .map((s) => Math.trunc(s * 1.1))
+  .forEach((s) => console.log(s));
 //* ======================================================
 //*                 REDUCE METHOD
 //* ======================================================
