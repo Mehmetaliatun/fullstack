@@ -42,10 +42,6 @@ const bigNames = names.map((name) => name.toUpperCase());
 console.log(bigNames, names);
 console.log(names.map((name) => name.toUpperCase()));
 
-//* ======================================================
-//*                CHAINING (PIPELINE)
-//* ======================================================
-
 //?-------------- ÖRNEK -------------------
 //? tlFiyatlar dizisindeki rakamlarin Euro ve dolar
 //? karsiliklarini hesaplatarak yeni dizelere kaydediniz
@@ -58,6 +54,32 @@ const euroPrices = tlPrices.map((tl) => (tl / euro).toPrecision(3));
 console.log(euroPrices);
 const dolarPrices = tlPrices.map((tl) => (tl / dolar).toPrecision(2));
 console.log(dolarPrices);
+
+//* ======================================================
+//*                CHAINING (PIPELINE)
+//* ======================================================
+//?-------------- ÖRNEK -------------------
+//? products dizisinin icerisindeki her urunu (Orjinal dizideki)
+//? buyuk harf olarak degistirelim.
+
+const products = [
+  "Iphone12",
+  "samsungS20",
+  "lenovo",
+  "macbook pro",
+  "mac air",
+  "Galaxy tablet",
+  "macbook",
+  "Iphone12",
+  "mac air",
+  "lenovo",
+  "macbook pro",
+  "samsungS20",
+];
+//! Orjinal diziyi degistidik.
+
+products.map((p, i, arr) => (arr[i] = p.toUpperCase()));
+console.log(products);
 //* ======================================================
 //*                 FILTER METHOD
 //* ======================================================
