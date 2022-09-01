@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+//**/
+//* Variable Usage
+//**/
+$fontSize: 1.2rem;
+$fontColor: white;
+$nabBgColor: #30a7c3;
+$fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+body {
+  font-family: $fontFamily;
+  background-color: $nabBgColor;
+  font-size: $fontSize;
+  color: $fontColor;
+}
+
+//******** HEADER *******/
+
+header {
+  img {
+    width: 80px;
+  }
+  a {
+  }
+}
