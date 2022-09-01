@@ -11,10 +11,13 @@ $fontSize: 1.2rem;
 $fontColor: white;
 $nabBgColor: #30a7c3;
 $fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$bannerBgColor: hotpink;
+$myBorder: 2px solid brown;
+$bgColor: pink;
 
 body {
   font-family: $fontFamily;
-  background-color: $nabBgColor;
+  background-color: $bgColor;
   font-size: $fontSize;
   color: $fontColor;
 }
@@ -22,9 +25,41 @@ body {
 //******** HEADER *******/
 
 header {
+  background-color: $nabBgColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
   img {
     width: 80px;
+    border: $myBorder;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      padding: 0.5rem;
+      //! içinde bulundğumuz elementi refere etmek için & işareti kullanılır.
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    // li:hover {
+    //   text-decoration: underline;
+    // }
   }
   a {
+    color: $fontColor;
+    text-decoration: none;
+  }
+}
+
+//******** BANNER *******/
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  background-color: $bannerBgColor;
+  aside {
   }
 }

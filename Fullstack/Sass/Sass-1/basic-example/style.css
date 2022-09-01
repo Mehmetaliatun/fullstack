@@ -6,13 +6,41 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #30a7c3;
+  background-color: pink;
   font-size: 1.2rem;
   color: white;
 }
 
+header {
+  background-color: #30a7c3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
 header img {
   width: 80px;
+  border: 2px solid brown;
+}
+header ul {
+  list-style-type: none;
+}
+header ul li {
+  display: inline-block;
+  padding: 0.5rem;
+}
+header ul li:hover {
+  text-decoration: underline;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  background-color: hotpink;
 }
 
 /*# sourceMappingURL=style.css.map */
