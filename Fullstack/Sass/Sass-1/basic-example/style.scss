@@ -14,6 +14,7 @@ $fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 $bannerBgColor: hotpink;
 $myBorder: 2px solid brown;
 $bgColor: pink;
+$backColor: white;
 
 body {
   font-family: $fontFamily;
@@ -84,3 +85,53 @@ header {
   }
 }
 //******** CARDS *******/
+
+@mixin myBox($backColor, $color) {
+  background-color: $backColor;
+  color: $color;
+  width: 25%;
+  height: 15rem;
+  border: $myBorder;
+  border-radius: 5px;
+}
+
+.cards {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  .card1 {
+    @include myBox(green, white);
+  }
+  .card2 {
+    @include myBox(brown, white);
+  }
+  .card3 {
+    @include myBox(yellow, black);
+  }
+  .card4 {
+    @include myBox(rgb(40, 33, 56), white);
+  }
+}
+//*******  ARTICLES *********/
+
+//*****************
+//! @EXTEND
+//*****************
+
+.articles {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  .article1 {
+    background-color: grey;
+    width: 50%;
+    border: 1px solid black;
+    height: 10rem;
+    margin-right: 1rem;
+  }
+  .article2 {
+    @extend .article1;
+    background-color: hotpink;
+    border-color: green;
+  }
+}
