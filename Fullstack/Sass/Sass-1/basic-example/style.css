@@ -126,26 +126,31 @@ footer .social1 {
   width: 20%;
   background-color: #ff1a1a;
   font-size: 1rem;
+  color: #990000;
 }
 footer .social2 {
   width: 20%;
   background-color: #ff3333;
   font-size: 2rem;
+  color: #55004e;
 }
 footer .social3 {
   width: 20%;
   background-color: #ff4d4d;
   font-size: 3rem;
+  color: #0fa8a1;
 }
 footer .social4 {
   width: 20%;
   background-color: #ff6666;
   font-size: 4rem;
+  color: #121456;
 }
 footer .social5 {
   width: 20%;
   background-color: #ff8080;
   font-size: 5rem;
+  color: #64c217;
 }
 
 /*# sourceMappingURL=style.css.map */
