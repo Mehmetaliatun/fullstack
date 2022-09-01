@@ -135,3 +135,18 @@ header {
     border-color: green;
   }
 }
+//*******  FOOTER *********/
+
+footer {
+  .social-icons {
+    display: flex;
+    height: 10rem;
+  }
+  @for $i from 1 to 6 {
+    .social#{$i} {
+      width: 20%;
+      background-color: lighten(red, $i * 5);
+      font-size: $i * 1rem;
+    }
+  }
+}

@@ -118,4 +118,34 @@ header a {
   border-color: green;
 }
 
+footer .social-icons {
+  display: flex;
+  height: 10rem;
+}
+footer .social1 {
+  width: 20%;
+  background-color: #ff1a1a;
+  font-size: 1rem;
+}
+footer .social2 {
+  width: 20%;
+  background-color: #ff3333;
+  font-size: 2rem;
+}
+footer .social3 {
+  width: 20%;
+  background-color: #ff4d4d;
+  font-size: 3rem;
+}
+footer .social4 {
+  width: 20%;
+  background-color: #ff6666;
+  font-size: 4rem;
+}
+footer .social5 {
+  width: 20%;
+  background-color: #ff8080;
+  font-size: 5rem;
+}
+
 /*# sourceMappingURL=style.css.map */
