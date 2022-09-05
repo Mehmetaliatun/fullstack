@@ -55,9 +55,6 @@ console.log(euroPrices);
 const dolarPrices = tlPrices.map((tl) => (tl / dolar).toPrecision(2));
 console.log(dolarPrices);
 
-//* ======================================================
-//*                CHAINING (PIPELINE)
-//* ======================================================
 //?-------------- ÖRNEK -------------------
 //? products dizisinin icerisindeki her urunu (Orjinal dizideki)
 //? buyuk harf olarak degistirelim.
@@ -80,6 +77,10 @@ const products = [
 
 products.map((p, i, arr) => (arr[i] = p.toUpperCase()));
 console.log(products);
+
+//* ======================================================
+//*                CHAINING (PIPELINE)
+//* ======================================================
 //* ======================================================
 //*                 FILTER METHOD
 //* ======================================================
@@ -109,3 +110,17 @@ salaries
 //* ======================================================
 //*                 REDUCE METHOD
 //* ======================================================
+//? • Array.reduce() metodu, bir fonksiyonu parametre olarak alır ve orijinal diziyi bu fonksiyona göre işleyerek tek bir değer döndürür.
+//? • Örneğin bir dizinin değerlerinin toplamını bulmak için reduce() metodu kullanılabilir.
+//? • reduce() metodu orijinal diziyi değiştirmez Sadece bir değer döndürür.
+
+// const salaries = [5500, 6500, 8000, 9000, 10001, 15000, 25000];
+
+const sumOfSalaries = salaries.reduce((acc, val) => acc + val, 0);
+console.log("SUM:", sumOfSalaries);
+
+const sumOfRaisedSalaries = salaries
+  .filter((sal) => sal <= 9000)
+  .map((sal) => Math.trunc(sal * 1.1))
+  .reduce((acc, salary) => acc + salary, 0);
+console.log("Sum of raised salaries:", sumOfRaisedSalaries);
