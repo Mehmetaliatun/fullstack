@@ -202,7 +202,7 @@ const people = {
     name: "ahmet",
     surname: "kale",
     dob: "1990",
-    job: "senior",
+    job: "dev",
     salary: "180000",
     drivingLicense: true,
   },
@@ -252,5 +252,13 @@ for (let [k, v] of Object.entries(people)) {
 
 //! ARRAY METOTLARI ILE
 console.log("************************");
-
 Object.keys(people).forEach((p) => console.log(p));
+console.log("************************");
+Object.values(people).forEach((p) => console.log(p.surname));
+
+//! job=dev olanlarin dob degerlerini yazdir.
+console.log("***********DEV*************");
+
+Object.values(people)
+  .filter((p) => p.job === "dev")
+  .forEach((p) => console.log(p.dob));
