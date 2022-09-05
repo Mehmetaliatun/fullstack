@@ -156,10 +156,23 @@ const personel = {
   calculateAge: function () {
     return new Date().getFullYear() - this.dob;
   },
-  sum: () => {
-    console.log(this); //? window
+
+  sum: function () {
+    console.log(this);
     return `${this.name} is ${this.calculateAge()} years old`;
   },
+  //   sum: () => {
+  //     console.log(this); //? window
+  //     return `${this.name} is ${this.calculateAge()} years old`;
+  //   },
 };
+
+//! Limitations of using Arrow functions: Following are the certain limitations of using an arrow function:
+//! An arrow function doesn’t have its own bindings with this or super.
+//! An Arrow function should not be used as methods.
+//! An arrow function can not be used as constructors.
+//! An arrow function can not use yield within its body.
+//! Arrow function cannot be suitable for call apply and bind methods.
+
 console.log("Age:", personel.calculateAge());
 console.log("Sum:", personel.sum());
