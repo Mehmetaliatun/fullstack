@@ -176,3 +176,49 @@ const personel = {
 
 console.log("Age:", personel.calculateAge());
 console.log("Sum:", personel.sum());
+
+//* ===================================================
+//*                OBJECTS ITERATION
+//* ===================================================
+
+const people = {
+  person1: {
+    name: "ali",
+    surname: "alican",
+    dob: "1996",
+    job: "dev",
+    salary: "140000",
+    drivingLicense: true,
+  },
+  person2: {
+    name: "mehmet",
+    surname: "can",
+    dob: "1986",
+    job: "ceo",
+    salary: "340000",
+    drivingLicense: false,
+  },
+  person3: {
+    name: "ahmet",
+    surname: "kale",
+    dob: "1990",
+    job: "senior",
+    salary: "180000",
+    drivingLicense: true,
+  },
+};
+console.log(people); //? {person1: {...},{person2: {...}}
+console.log("Salary of p2:", people.person2.salary);
+
+//? Javascript'de Objeler default olarak iterable degildir.
+//? Ama for in ve for of donguleri ile itere edilebilirler.
+
+//! FOR - IN
+//* for (key in object) {
+//*   // code block to be executed
+//* }
+
+for (let person in people) {
+  console.log(person);
+  console.log(people[person]);
+}
