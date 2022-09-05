@@ -57,3 +57,109 @@
 //? Herhangi bir veriyi erismek icin property (key) adi kullanilir.
 
 console.log("******* Objects *********");
+
+//! 3 farkli yontem ile object olusturulabilir
+//* ------------------------------------------------------
+//* 1-Object() class'indan new Operatoru ile
+//* ------------------------------------------------------
+
+const arabalar = new Object();
+arabalar.marka = "Bmw";
+arabalar.motor = "1.3";
+arabalar.model = 2022;
+arabalar.lpg = true;
+console.log(arabalar);
+
+//! Read
+console.log(arabalar.lpg); //? .notation
+console.log("MODEL:", arabalar["model"]); //? square bracket notation
+
+//? square bracket yonteminin en buyuk avantaji key degerini
+//? degisken olarak kullanabilmektir
+const key = "motor";
+console.log(arabalar[key]);
+
+arabalar.motor = "1.6";
+console.log(arabalar.motor);
+
+//* ------------------------------------------------------
+//* 2- object constructor'i kullanarak (OOP ile ayrintilandiracak)
+//* ------------------------------------------------------
+
+//? object constructor
+
+function Personel(id, ad, maas) {
+  this.perId = id;
+  this.perAd = ad;
+  this.perMaas = maas;
+  //   console.log(this); //! personel objesine baglanmistir.(binded)
+}
+
+const kisi1 = new Personel("4241", "Mehmet", 15000);
+const kisi2 = new Personel("4242", "Ali", 18500);
+console.log(kisi1);
+console.log(kisi1["perMaas"]);
+console.log("Kisi bilgileri:", kisi2);
+
+//? global alanda window objesini gosterir.
+console.log(this);
+//* ------------------------------------------------------
+//* 3- object literal (en cok tercih edilen yontem)
+//* ------------------------------------------------------
+
+const worker = {
+  name: "Ali",
+  surName: "ATUN",
+  age: 26,
+  job: "developer",
+  lang: ["c++", "java", "js", "phyton", "go"],
+  salary: 140000,
+};
+console.log(worker);
+console.log("Job:", worker.job);
+console.log("lang", worker["lang"]);
+
+console.log(worker.lang[2]);
+
+worker["lang"].forEach((l) => console.log(l));
+
+worker.dob = "1996";
+worker.email = "maa@gmail.com";
+console.log(worker);
+
+// worker["salary"] = worker["salary"] * 1.1;
+worker["salary"] * 1.1;
+console.log(worker);
+//* Object Copy
+
+const person = worker; //! shallow (sig-sığ)copying
+console.log("PERSON:", person);
+
+//!Object.create(), assign(), spread(), concat(),slice() -> shallow copy
+person.dob = "2000";
+console.log(person);
+
+//! deep copy
+let deepCopyOfWorker = JSON.parse(JSON.stringify(worker));
+// console.log(JSON.stringify(worker));
+
+deepCopyOfWorker.dob = "2022";
+console.log("DEEP:", deepCopyOfWorker);
+
+const personel = {
+  name: "ali",
+  surname: "alican",
+  dob: "1996",
+  job: "dev",
+  salary: "140000",
+  drivingLicense: true,
+  calculateAge: function () {
+    return new Date().getFullYear() - this.dob;
+  },
+  sum: () => {
+    console.log(this); //? window
+    return `${this.name} is ${this.calculateAge()} years old`;
+  },
+};
+console.log("Age:", personel.calculateAge());
+console.log("Sum:", personel.sum());
