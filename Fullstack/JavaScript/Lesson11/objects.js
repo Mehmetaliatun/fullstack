@@ -231,7 +231,26 @@ for (let person in people) {
 //* for (x of iterable) {
 //*   // code block to be executed
 //* }
+console.log("************************");
 
-// for (let person of people) {
-//   console.log(person);
-// }
+for (let key of Object.keys(people)) {
+  console.log(key);
+}
+
+console.log("************************");
+//? people objesindeki tum salary'leri yazdir
+for (let v of Object.values(people)) {
+  console.log(v.salary);
+  //   console.log(v.["salary"]);
+}
+
+console.log("************************");
+
+for (let [k, v] of Object.entries(people)) {
+  console.log(`${k}-${v.salary}`);
+}
+
+//! ARRAY METOTLARI ILE
+console.log("************************");
+
+Object.keys(people).forEach((p) => console.log(p));
