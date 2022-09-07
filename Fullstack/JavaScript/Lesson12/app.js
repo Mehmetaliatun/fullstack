@@ -88,14 +88,82 @@ team.forEach((p) => {
   console.log("Age:", p.age);
 });
 
+//* function
+const getInfo = () => {
+  return {
+    id: 1,
+    productName: "Xiaomi",
+    price: 8000,
+  };
+};
+console.log(getInfo());
+const { productName, price } = getInfo();
+console.log("Product Name:", productName);
+console.log("Price:", price);
+
+//? Fonksiyonlarin obje parametreleri dogrudan dest. yapilabilir.
+const calculate = ({ id, price }) => {
+  console.log(price * 1.2);
+};
+calculate({ id: 1, price: 3000 });
+
 //* ======================================================
 //*  DESTRUCTURING (ARRAY)
 //* ======================================================
+const names = ["ahmet", "mehmet", "ismet", "saffet"];
+//* CLASSICAL
+const mehmet = names[1]; //* indexing
+
+const [p1, p2, , p4] = names;
+console.log(p1, p2, p4);
 
 //*======================================================
 //*  REST (...)
 //* ======================================================
 
+//? REST operatoru kullanici tarafindan girilen degerleri dizi
+//? icerisine konumlandirir. Cesitli kullanim alanlari vardir.
+
+//! 1- Bir dizi veya object'deki bazi degerlerden geri kalanlarini
+//!    ayri dizi yada objelere kopyalanmasini saglayabilir.
+
+//* REST: (Arrays)
+const autos = ["reno", "anadol", "bmw", "mercedes", "ferrari"];
+
+const [reno, anadol, ...restAutos] = autos;
+console.log(reno, anadol);
+console.log(restAutos);
+
+//* REST: (Object)
+
+const personel = {
+  pName: "john",
+  surname: "smith",
+  job: "dev",
+  age: 30,
+};
+const { pName, job, ...ageSurname } = personel;
+console.log(ageSurname);
+console.log(pName, job);
+//! 2-bir fonksiyonun argumanlarini diziye cevirmek icin kullanilabilir.
+
+const sum = (x, y) => x + y;
+
+//? hata vermez fakat sadece 2 argumani toplar
+console.log(sum(1, 2, 3, 4, 5, 6));
+
+const sumAll = (...numbers) => {
+  console.log(numbers); //? [1,2,3,4]
+  return numbers.reduce((s, n) => (s += n), 0);
+};
+console.log("Sum of numbers:", sumAll(1, 2, 3, 4, 5, 6));
+
+const showName = (name, surname, ...titles) => {
+  console.log(titles);
+  const summary = `${name} ${surname} is a ${titles.join(" and ")}`;
+  console.log(summary);
+};
+showName(`Noah`, `Adams`, `Developer`, `Instr`, `Professor`, `Dad`);
 //*======================================================
 //*  SPREAD (...)
 //* ======================================================
