@@ -180,6 +180,7 @@ console.log("Sum:", personel.sum());
 //* ===================================================
 //*                OBJECTS ITERATION
 //* ===================================================
+//? nested
 
 const people = {
   person1: {
@@ -262,3 +263,40 @@ console.log("***********DEV*************");
 Object.values(people)
   .filter((p) => p.job === "dev")
   .forEach((p) => console.log(p.dob));
+
+//* ===================================================
+//*    JSON ?> Js Object Notation
+//* ===================================================
+
+const team = [
+  { name: "Josh", surname: "Scyler", job: "Dev", age: 29 },
+  { name: "Mike", surname: "Roller", job: "Tester", age: 39 },
+  { name: "Brendon", surname: "Kante", job: "Dev", age: 20 },
+]; //*JSON
+
+console.log(team);
+console.log(team[2]);
+
+//* Ornek 1: team dizisindeki joblari tek tek yazdir
+
+team.forEach((item) => console.log(item.job)); //! item degisebilir.
+
+//* Ornek 2:Age 1 arttirarak yeni bir diziye saklayiniz.
+
+const ages = team.map((p) => (p.age += 1));
+console.log(ages);
+
+//* Ornek3: name ve surname'leri birlestirip buyuk harfe ceviren ve
+//* bunu fullName key'i olarak saklayan, ayni zamanda age degerlerini 5
+//* arttirarak age key'ine saklayan ve olusan diziyi donduren kodu yazınız.
+
+const teamFullName = team.map((p) => {
+  return {
+    fullName: p.name.toUpperCase() + " " + p.surname.toUpperCase(),
+    age: p.age + 5,
+  };
+});
+
+console.log(teamFullName);
+
+const teamFullName = team.map((p) => ({}));
