@@ -41,3 +41,7 @@
 //   }
 //   console.log(daltones[i]);
 // }
+
+let avengers = ["Iron Man", "Captain America", "Black Widow", "Hulk"];
+avengers.splice(2, 1, "Thor", "Hawkeye");
+console.log(avengers);
