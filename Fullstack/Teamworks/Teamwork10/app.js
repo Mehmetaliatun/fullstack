@@ -18,13 +18,26 @@
 //   console.log(key);
 // }
 
-const myCar = {
-  make: "ford",
-  model: "Mustang",
-  year: 1965,
-  color: "Black",
-};
-myCar.age = function (current) {
-  console.log(current - this.year);
-};
-myCar.age(2022);
+// const myCar = {
+//   make: "ford",
+//   model: "Mustang",
+//   year: 1965,
+//   color: "Black",
+// };
+// myCar.age = function (current) {
+//   console.log(current - this.year);
+// };
+// myCar.age(2022);
+
+// let daltones = ["joe", "Jack", "Willam", "Averell"];
+// daltones.shift();
+// daltones.pop();
+// console.log(daltones);
+
+// let daltones = ["joe", "Jack", "Willam", "Averell"];
+// for (let i = 0; i < daltones.length; i++) {
+//   if (i == 1) {
+//     continue;
+//   }
+//   console.log(daltones[i]);
+// }
