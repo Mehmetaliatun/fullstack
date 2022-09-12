@@ -27,3 +27,17 @@ h1.addEventListener("click", () => {
 
 //* EXAMPLE-2 (addEventListener())
 //* -------------------------------------------------
+
+document.getElementById("btn").addEventListener("click", function () {
+  const input = document.querySelector("#input");
+  //   if (!input.value) {
+  //     alert("Please enter an item");
+  //   } else {
+  //     alert(`${input.value} entered`);
+  //   }
+
+  !input.value
+    ? alert("Please enter an item")
+    : alert(`${input.value} entered`);
+  input.value = "";
+});
