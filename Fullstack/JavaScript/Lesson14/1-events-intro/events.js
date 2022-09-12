@@ -9,6 +9,7 @@ console.log("****** EVENTS *******");
 
 const h1 = document.querySelector("#header h1");
 
+//? 3.method
 h1.onmouseover = function () {
   h1.style.color = "red";
   h1.style.fontWeight = "300";
@@ -18,6 +19,11 @@ h1.onmouseout = () => {
   h1.style.color = "black";
   h1.style.fontWeight = "900";
 };
+
+//? 4.method
+h1.addEventListener("click", () => {
+  alert("Don't click me!");
+});
 
 //* EXAMPLE-2 (addEventListener())
 //* -------------------------------------------------
