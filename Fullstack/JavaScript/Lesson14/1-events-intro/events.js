@@ -40,6 +40,7 @@ document.getElementById("btn").addEventListener("click", function () {
     ? alert("Please enter an item")
     : alert(`${input.value} entered`);
   input.value = "";
+  //   document.querySelector("#input").focus(); //tekrar burada basliyor
 });
 
 //* EXAMPLE-3
@@ -60,6 +61,13 @@ list.forEach((li) => {
     li.style.transform = "translateX(-10px)";
   };
 });
+
+//* EXAMPLE-4(onload)
+//* -------------------------------------------------
+
+window.onload = function () {
+  document.querySelector("#input").focus();
+};
 
 const print = () => {
   console.log("starting");
