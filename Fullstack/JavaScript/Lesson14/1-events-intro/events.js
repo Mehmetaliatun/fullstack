@@ -14,5 +14,10 @@ h1.onmouseover = function () {
   h1.style.fontWeight = "300";
 };
 
+h1.onmouseout = () => {
+  h1.style.color = "black";
+  h1.style.fontWeight = "900";
+};
+
 //* EXAMPLE-2 (addEventListener())
 //* -------------------------------------------------
