@@ -41,3 +41,22 @@ document.getElementById("btn").addEventListener("click", function () {
     : alert(`${input.value} entered`);
   input.value = "";
 });
+
+//* EXAMPLE-3
+//* -------------------------------------------------
+const list = document.querySelectorAll(".list"); //?nodelist
+
+list.forEach((li) => {
+  li.onmouseover = () => {
+    li.style.fontSize = "2rem";
+  };
+
+  li.onmouseout = () => {
+    li.style.fontSize = "1rem";
+  };
+});
+
+const print = () => {
+  console.log("starting");
+};
+print();
