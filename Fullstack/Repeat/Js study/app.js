@@ -66,3 +66,31 @@ console.log("yukari yuvarlama:", Math.ceil(1.9));
 //* yakina yuvarlama
 
 console.log("yakina yuvarlama:", Math.round(1.2));
+
+//* -------------------- Veri turleri
+
+let number1 = "11";
+number1 = parseInt(number1);
+console.log(number1, typeof number1);
+
+let number2 = "11px";
+number2 = parseInt(number2);
+console.log(number2, typeof number2);
+
+let number3 = "11.3px";
+number3 = Number(number3);
+console.log(number3, typeof number3); // icinde yazi olunca olmuyor.
+
+let number4 = "44.3px";
+number4 = parseFloat(number4);
+console.log(number4, typeof number4); // yazi olsada sayi yapiyor
+
+let number5 = "11.3";
+number5 = Number(number5);
+console.log(number5, typeof number5); // tam sayi yapiyor
+
+//* number veri tipinden string'e dondurme
+
+let number6 = 66;
+number6 = number6.toString();
+console.log(number6, typeof number6);
