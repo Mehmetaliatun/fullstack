@@ -42,7 +42,10 @@ langInput.addEventListener("keydown", (event) => {
   if (event.keyCode === 13) {
     addBtn.click();
   }
-  if (event.code === "Delete") {
+  //   if (event.code === "Delete") {
+  //     deleteBtn.click();
+  //   }
+  if (event.keyCode === 46) {
     deleteBtn.click();
   }
 });
