@@ -32,7 +32,7 @@ deleteBtn.addEventListener("click", () => {
     : alert("There is no item to delete");
 });
 
-//? enter key event handler
+//? enter key event handler & del key event handler
 langInput.addEventListener("keydown", (event) => {
   //   console.log(event);
   //   console.log(event.target);
@@ -49,8 +49,6 @@ langInput.addEventListener("keydown", (event) => {
     deleteBtn.click();
   }
 });
-
-//? del key event handler
 
 //? onload event handler
 window.addEventListener("load", () => {
