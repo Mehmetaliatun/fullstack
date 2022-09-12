@@ -27,8 +27,24 @@ window.addEventListener("load", () => {
 //? deleteBtn event handler
 
 deleteBtn.addEventListener("click", () => {
-  newUl.removeChild(newUl.lastElementChild);
+  newUl.childElementCount > 0
+    ? newUl.removeChild(newUl.lastElementChild)
+    : alert("There is no item to delete");
 });
+
+//? enter key event handler
+langInput.addEventListener("keydown", (event) => {
+  //   console.log(event);
+  //   console.log(event.target);
+  //   console.log(event.keyCode);
+  //   console.log(event.code);
+
+  if (event.keyCode === 13) {
+    addBtn.click();
+  }
+});
+
+//? del key event handler
 
 //? onload event handler
 window.addEventListener("load", () => {
