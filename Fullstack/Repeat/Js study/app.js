@@ -89,8 +89,33 @@ let number5 = "11.3";
 number5 = Number(number5);
 console.log(number5, typeof number5); // tam sayi yapiyor
 
+//! number virgullu olanlari donusturur fakat string olursa olmuyor.
+
 //* number veri tipinden string'e dondurme
 
 let number6 = 66;
 number6 = number6.toString();
 console.log(number6, typeof number6);
+
+//* ------------------ Template Literals
+
+let userName = "mehmet";
+const domain = "atun.org";
+
+let email = userName + "@" + domain;
+console.log(
+  "Maraba",
+  userName,
+  "gardas siteye hosgeldin,",
+  "email adresin:",
+  email
+);
+
+let info = `Maraba, ${userName} gardasim. mail adresin: ${email}, mail adresinin uzunlugu: ${
+  email.length
+}
+kisa isminiz:${userName[0]}
+borcunuz: ${2 * 5 * 10} ₺
+gunun saati: ${new Date().getHours()}
+`;
+console.log(info);
