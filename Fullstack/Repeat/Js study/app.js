@@ -166,4 +166,7 @@ console.log(emailDev.includes("@"));
 
 console.log(emailDev.endsWith("com")); //* true doner.
 
-//* ilk harflerini buyuk yapmak
+//* ilk harflerini kucuk yapmak
+
+let fullName1 = `${firstName[0].toLowerCase()}${firstName.slice(1)}`;
+console.log(fullName1);
