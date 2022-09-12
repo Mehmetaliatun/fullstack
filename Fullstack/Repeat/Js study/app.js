@@ -119,3 +119,25 @@ borcunuz: ${2 * 5 * 10} ₺
 gunun saati: ${new Date().getHours()}
 `;
 console.log(info);
+
+//* ------------------------ String veri turu islemleri
+
+let email1 = "mehmetaliatun6@gmail.com";
+let firstName = "mehmet";
+let lastName = "ATUN";
+
+//* length
+console.log(email1.length);
+
+//* ilk karakter bulma
+console.log(firstName[0]);
+console.log(firstName.charAt(0));
+
+//* buyuk kucuk harf
+
+firstName = firstName.toUpperCase();
+console.log(firstName);
+lastName = lastName.toLocaleLowerCase();
+console.log(lastName);
+
+//* string icinde istedigimiz bilgiyi aramak ve yerini bulmak
