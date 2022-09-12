@@ -47,12 +47,17 @@ document.getElementById("btn").addEventListener("click", function () {
 const list = document.querySelectorAll(".list"); //?nodelist
 
 list.forEach((li) => {
+  li.style.transition = "all .7s";
+  li.style.lineHeight = "2rem";
   li.onmouseover = () => {
     li.style.fontSize = "2rem";
+    // li.style.transition = ".5s"; //! icinde bu sekilde
+    li.style.transform = "translateX(10px)";
   };
 
   li.onmouseout = () => {
     li.style.fontSize = "1rem";
+    li.style.transform = "translateX(-10px)";
   };
 });
 
