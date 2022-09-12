@@ -140,4 +140,20 @@ console.log(firstName);
 lastName = lastName.toLocaleLowerCase();
 console.log(lastName);
 
-//* string icinde istedigimiz bilgiyi aramak ve yerini bulmak
+//* string icinde istedigimiz bilgiyi aramak ve yerini bulmak -> search:
+
+console.log(email1.search("h"));
+console.log(email1[2]);
+
+email.search("olmayan"); // -1 verir
+
+//* belli bir yere kadar al -> slice
+let domain1 = email1.slice(email1.search("@") + 1);
+//* +1 ile birlikte istedigimiz yerin 1 sonrasindan baslar
+console.log(domain1);
+console.log(domain1.slice(0, domain1.indexOf("."))); //* sadece gmail kisini aldik
+
+//* bilgiyi degistir -> replace:
+
+email1 = email1.replace("gmail.com", "developer.com");
+console.log(email1);
