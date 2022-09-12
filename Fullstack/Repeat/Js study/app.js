@@ -155,5 +155,9 @@ console.log(domain1.slice(0, domain1.indexOf("."))); //* sadece gmail kisini ald
 
 //* bilgiyi degistir -> replace:
 
-email1 = email1.replace("gmail.com", "developer.com");
-console.log(email1);
+let emailDev = email1.replace("gmail.com", "developer.com");
+console.log(emailDev);
+
+//* istedigim bilgi var mi -> icludes:
+
+console.log(emailDev.includes("@"));
