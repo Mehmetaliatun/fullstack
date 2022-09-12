@@ -31,3 +31,6 @@ deleteBtn.addEventListener("click", () => {
 });
 
 //? onload event handler
+window.addEventListener("load", () => {
+  langInput.focus();
+});
