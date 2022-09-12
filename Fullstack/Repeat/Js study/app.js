@@ -161,3 +161,9 @@ console.log(emailDev);
 //* istedigim bilgi var mi -> icludes:
 
 console.log(emailDev.includes("@"));
+
+//* istedigim bilgiyle basladi mi ?-bitti mi? -> startsWidth, endsWidth:
+
+console.log(emailDev.endsWith("com")); //* true doner.
+
+//* ilk harflerini buyuk yapmak
