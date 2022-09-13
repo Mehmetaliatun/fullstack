@@ -173,14 +173,24 @@
 
 //* --------------- COKLU KOSULLAR
 
-let userName = prompt("Please enter your name:");
-let age = prompt("Please enter your age:");
+// let userName = prompt("Please enter your name:");
+// let age = prompt("Please enter your age:");
+// let info = document.querySelector("#info");
+
+// if (userName && age >= 18) {
+//   alert("You can enroll the driving licence");
+// } else if (!userName) {
+//   alert("We need your name!");
+// } else if (!(age >= 18)) {
+//   alert("You must enter your age or your age is under 18!");
+// }
+
+//* ------------- TERNARY
+
+let userName = prompt("enter user name");
 let info = document.querySelector("#info");
 
-if (userName && age >= 18) {
-  alert("You can enroll the driving licence");
-} else if (!userName) {
-  alert("We need your name!");
-} else if (!(age >= 18)) {
-  alert("You must enter your age or your age is under 18!");
-}
+//* ternary kullanimi:
+//* kosul ? dogruysa : yanlissa
+
+console.log`#{userName.length > 0 ? userName: "kullanici bilgisi bulunamadi"}`;
