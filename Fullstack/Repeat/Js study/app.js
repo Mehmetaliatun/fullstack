@@ -235,3 +235,25 @@
 // let info = document.querySelector("#info");
 // info.innerHTML = ` ${grade} : ${textInfo} `;
 // console.log(textInfo);
+
+//! ------------------Hesap makinesi
+
+// let sayi1 = Number(prompt("Birinci sayiyi giriniz:"));
+// let islem = prompt("Yapmak istediginiz islemi seciniz:");
+// let sayi2 = Number(prompt("İkinci sayiyi giriniz:"));
+// let sonuc;
+
+// if (islem === "/") {
+//   sonuc = sayi1 / sayi2;
+// } else if (islem === "*") {
+//   sonuc = sayi1 * sayi2;
+// } else if (islem === "+") {
+//   sonuc = sayi1 + sayi2;
+// } else if (islem === "-") {
+//   sonuc = sayi1 - sayi2;
+// }
+
+// let info = document.querySelector("#info");
+// info.innerHTML = `${sonuc}`;
+
+// console.log(sonuc);
