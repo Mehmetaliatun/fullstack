@@ -187,10 +187,51 @@
 
 //* ------------- TERNARY
 
-let userName = prompt("enter user name");
-let info = document.querySelector("#info");
+// let userName = prompt("enter user name");
+// let info = document.querySelector("#info");
 
-//* ternary kullanimi:
-//* kosul ? dogruysa : yanlissa
+// //* ternary kullanimi:
+// //* kosul ? dogruysa : yanlissa
 
-console.log`#{userName.length > 0 ? userName: "kullanici bilgisi bulunamadi"}`;
+// console.log`#{userName.length > 0 ? userName: "kullanici bilgisi bulunamadi"}`;
+
+//* Kosullar ile calismak
+
+//! ------------------Not hesaplama
+
+//* prompt ile aldigin bilgiye gore not bilgisini info'ya yazdir
+
+// let grade = prompt("Notunuzu girin:");
+// let textInfo;
+// let happy = `🥳`;
+// let sad = `😢`;
+
+// if (grade >= 0 && grade <= 100) {
+//   if (grade >= 90) {
+//     textInfo = `${happy} AA`;
+//   } else if (grade >= 85) {
+//     textInfo = "BA";
+//   } else if (grade >= 80) {
+//     textInfo = "BB";
+//   } else if (grade >= 75) {
+//     textInfo = "CB";
+//   } else if (grade >= 70) {
+//     textInfo = "CC";
+//   } else if (grade >= 65) {
+//     textInfo = "DC";
+//   } else if (grade >= 60) {
+//     textInfo = "DD";
+//   } else if (grade >= 50) {
+//     textInfo = "FD";
+//   } else if (grade < 50) {
+//     textInfo = `${sad} FF`;
+//   }
+// } else if (grade > 100) {
+//   textInfo = "100'den kucuk bir not giriniz";
+// } else if (grade < 0) {
+//   textInfo = "0'dan buyuk bir not giriniz!";
+// }
+
+// let info = document.querySelector("#info");
+// info.innerHTML = ` ${grade} : ${textInfo} `;
+// console.log(textInfo);
