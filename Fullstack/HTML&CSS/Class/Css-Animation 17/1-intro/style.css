@@ -1,1 +1,40 @@
 /******* ANIMATION INTRO *******/
+
+.outer {
+  background-color: blueviolet;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+.inner {
+  background-color: cadetblue;
+  width: 50%;
+  height: 50%;
+  /* transition: transform 1s ease-in-out, background-color 1s; */
+  /* transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+}
+
+.outer:hover .inner {
+  /* background-color: chartreuse;
+  transform: translateX(250px); */
+
+  animation: travel 1s ease-in-out;
+  animation-iteration-count: 1;
+}
+/*? keyframe :animasyon noktalarinin ve zamanlarinin tanimlanmasini saglar.
+/*? % olarak from - to seklinde kullanilabilir. */
+
+@keyframes travel {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
