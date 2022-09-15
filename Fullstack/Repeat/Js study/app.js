@@ -257,3 +257,32 @@
 // info.innerHTML = `${sonuc}`;
 
 // console.log(sonuc);
+
+//! ------------------ Kredi Hesaplama
+
+let krediTuru = prompt("Ihtiyaciniz olan kredi turunu yaziniz:");
+let faiz1 = 1.89;
+let faiz2 = 1.69;
+let faiz3 = 1.99;
+let krediMiktari = Number(prompt("Ihtiyaciniz olan miktari giriniz:"));
+let vade = Number(prompt("Kac ay vade ile odemek istersiniz:"));
+let geriOdeme;
+
+if (krediTuru === "ev") {
+  geriOdeme = Math.round(
+    [(krediMiktari / 100) * (faiz1 / 12) * vade] + krediMiktari
+  );
+} else if (krediTuru === "arac") {
+  geriOdeme = Math.round(
+    [(krediMiktari / 100) * (faiz2 / 12) * vade] + krediMiktari
+  );
+} else if (krediTuru === "ihtiyac") {
+  geriOdeme = Math.round(
+    [(krediMiktari / 100) * (faiz3 / 12) * vade] + krediMiktari
+  );
+}
+
+let info = document.querySelector("#info");
+info.innerHTML = `${geriOdeme} ${"₺"}`;
+
+console.log(geriOdeme);
