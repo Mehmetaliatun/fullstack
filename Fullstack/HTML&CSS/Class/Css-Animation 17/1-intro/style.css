@@ -18,7 +18,7 @@
   /* background-color: chartreuse;
   transform: translateX(250px); */
 
-  animation: travel 5s ease-in-out;
+  /* animation: travel 5s ease-in-out; */
   /*! animasyon tekrar adedi */
   /*! **************************/
 
@@ -31,13 +31,15 @@
   /*! animasyon doldurma */
   /*! **************************/
 
-  animation-fill-mode: forwards;
+  /* animation-fill-mode: forwards; */
 
   /*! animasyon delay */
   /*! **************************/
 
-  animation-delay: 1s;
+  /* animation-delay: 1s; */
   /* animation-delay: -2s; */
+
+  animation: travel 2s ease-in-out 0.5s 2 alternate forwards;
 }
 /*? keyframe :animasyon noktalarinin ve zamanlarinin tanimlanmasini saglar.
 /*? % olarak from - to seklinde kullanilabilir. */
