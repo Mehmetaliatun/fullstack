@@ -19,7 +19,19 @@
   transform: translateX(250px); */
 
   animation: travel 1s ease-in-out;
-  animation-iteration-count: 1;
+  /*! animasyon tekrar adedi */
+  /*! **************************/
+
+  /* animation-iteration-count: 3; */
+
+  /*! animasyon yonu */
+  /*! **************************/
+  /* animation-direction: alternate; */
+
+  /*! animasyon doldurma */
+  /*! **************************/
+
+  animation-fill-mode: forwards;
 }
 /*? keyframe :animasyon noktalarinin ve zamanlarinin tanimlanmasini saglar.
 /*? % olarak from - to seklinde kullanilabilir. */
