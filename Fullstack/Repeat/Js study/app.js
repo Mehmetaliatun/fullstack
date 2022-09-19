@@ -260,29 +260,135 @@
 
 //! ------------------ Kredi Hesaplama
 
-let krediTuru = prompt("Ihtiyaciniz olan kredi turunu yaziniz:");
-let faiz1 = 1.89;
-let faiz2 = 1.69;
-let faiz3 = 1.99;
-let krediMiktari = Number(prompt("Ihtiyaciniz olan miktari giriniz:"));
-let vade = Number(prompt("Kac ay vade ile odemek istersiniz:"));
-let geriOdeme;
+// let krediTuru = prompt("Ihtiyaciniz olan kredi turunu yaziniz:");
+// let faiz1 = 1.89;
+// let faiz2 = 1.69;
+// let faiz3 = 1.99;
+// let krediMiktari = Number(prompt("Ihtiyaciniz olan miktari giriniz:"));
+// let vade = Number(prompt("Kac ay vade ile odemek istersiniz:"));
+// let geriOdeme;
 
-if (krediTuru === "ev") {
-  geriOdeme = Math.round(
-    [(krediMiktari / 100) * (faiz1 / 12) * vade] + krediMiktari
-  );
-} else if (krediTuru === "arac") {
-  geriOdeme = Math.round(
-    [(krediMiktari / 100) * (faiz2 / 12) * vade] + krediMiktari
-  );
-} else if (krediTuru === "ihtiyac") {
-  geriOdeme = Math.round(
-    [(krediMiktari / 100) * (faiz3 / 12) * vade] + krediMiktari
-  );
-}
+// if (krediTuru === "ev") {
+//   geriOdeme = Math.round(
+//     [(krediMiktari / 100) * (faiz1 / 12) * vade] + krediMiktari
+//   );
+// } else if (krediTuru === "arac") {
+//   geriOdeme = Math.round(
+//     [(krediMiktari / 100) * (faiz2 / 12) * vade] + krediMiktari
+//   );
+// } else if (krediTuru === "ihtiyac") {
+//   geriOdeme = Math.round(
+//     [(krediMiktari / 100) * (faiz3 / 12) * vade] + krediMiktari
+//   );
+// }
 
-let info = document.querySelector("#info");
-info.innerHTML = `${geriOdeme} ${"₺"}`;
+// let info = document.querySelector("#info");
+// info.innerHTML = `${geriOdeme} ${"₺"}`;
 
-console.log(geriOdeme);
+// console.log(geriOdeme);
+
+//* vowels regex
+
+// function countVowel(str) {
+//   // find the count of vowels
+//   const count = str.match(/[aeiou]/gi).length;
+
+//   // return number of vowels
+//   return count;
+// }
+
+// // take input
+// const string = prompt("Enter a string: ");
+
+// const result = countVowel(string);
+
+// console.log(result);
+
+//* vowels
+// // program to count the number of vowels in a string
+
+// // defining vowels
+// const vowels = ["a", "e", "i", "o", "u"];
+
+// function countVowel(str) {
+//   // initialize count
+//   let count = 0;
+
+//   // loop through string to test if each character is a vowel
+//   for (let letter of str.toLowerCase()) {
+//     if (vowels.includes(letter)) {
+//       count++;
+//     }
+//   }
+
+//   // return number of vowels
+//   return count;
+// }
+
+// // take input
+// const string = prompt("Enter a string: ");
+
+// const result = countVowel(string);
+
+// console.log(result);
+
+//* diamonds
+
+// function slope(val) {
+//   document.write("function slope(" + val + ")<br>");
+//   doubleit = val * 2;
+
+//   for (i = 0; i < doubleit; i++) {
+//     if (i < val) {
+//       for (j = 0; j < i; j++) {
+//         document.write("*");
+//       }
+//     }
+//     if (i >= val) {
+//       for (j = doubleit; j > i; j--) {
+//         document.write("*");
+//       }
+//     }
+
+//     document.write("<br>");
+//   }
+// }
+
+// function diamond(val) {
+//   doubleit = val * 2;
+//   document.write("<center>");
+//   document.write("function diamond(" + val + ")<br>");
+//   for (i = 0; i < doubleit; i++) {
+//     if (i < val) {
+//       for (j = 0; j < i; j++) {
+//         document.write("*");
+//       }
+//     }
+//     if (i >= val) {
+//       for (j = doubleit; j > i; j--) {
+//         document.write("*");
+//       }
+//     }
+
+//     document.write("<br>");
+//   }
+
+//   document.write("</center>");
+// }
+
+//*
+// let n = 5; // row or column count
+// // defining an empty string
+// let string = "";
+
+// for (let i = 0; i < n; i++) {
+//   // external loop
+//   for (let j = 0; j < n; j++) {
+//     // internal loop
+//     string += "*";
+//   }
+//   // newline after each row
+//   string += "\n";
+// }
+// // printing the string
+// console.log(string);
