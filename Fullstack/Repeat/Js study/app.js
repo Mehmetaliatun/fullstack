@@ -392,3 +392,45 @@
 // }
 // // printing the string
 // console.log(string);
+
+//! 1. Print all even numbers from 0 – 10
+// Try to make the solution to this problem as efficiently as possible. Consider using loops that would allow you to type the fewest characters/commands. While you could simply print the even numbers, get creative and see how you could output them in a way that would work up to 10 or even up to 10,000 with little extra effort.
+
+// const arrOddEven = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// for (i = 0; i < arrOddEven.length; i++) {
+//   a = arrOddEven[i];
+//   if (a % 2) {
+//     console.log(${a} is odd);
+//   } else {
+//     console.log(${a} is even);
+//   }
+// }
+
+//! 2. Print a table containing multiplication tables
+// Let's start with the tables that many of us had to memorize in school. Can you print a table that contains all the answers to the multiplication tables from 1 through 10?
+
+// let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const sayi = prompt("Please enter a number between 1-10.");
+// for (i = 0, i < arr1.length; i++) {
+//     const carpim = arr1[i];
+//     let result = carpim * sayi
+//     console.log(`${sayi} ${carpim} ${result}`);
+// }
+
+// let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const sayi = prompt("1'den 10'a kadar bir sayi giriniz.");
+
+// for (i = 0; i < arr1.length; i++) {
+//   const carpim = arr1[i];
+//   let result = sayi * carpim;
+//   console.log(`${sayi} * ${carpim} = ${result}`);
+// }
+
+// let kare = prompt("Karesini almak istediginiz sayiyi giriniz.");
+
+// let sonuc = kare * kare;
+// console.log(`${kare} * ${kare} = ${sonuc} `);
+
+let knot = 1852;
+let;
