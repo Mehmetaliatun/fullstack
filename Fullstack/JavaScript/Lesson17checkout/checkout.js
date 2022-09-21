@@ -20,7 +20,7 @@ productsDiv.addEventListener("click", (event) => {
     // console.log("minus btn is clicked!");
     if (event.target.parentElement.querySelector(".quantity").innerText > 1) {
       event.target.parentElement.querySelector(".quantity").innerText--;
-      calculateProductPrice();
+      calculateProductPrice(event.target);
       calculateCartPrice();
       // event.target.nextElementSibling.innerText--;
     } else {
@@ -34,7 +34,7 @@ productsDiv.addEventListener("click", (event) => {
   } else if (event.target.classList.contains("fa-plus")) {
     // console.log("plus btn is clicked!");
     event.target.previousElementSibling.innerText++;
-    calculateProductPrice();
+    calculateProductPrice(event.target);
     calculateCartPrice();
   } else if (event.target.className == "remove-product") {
     // console.log("remove btn is clicked");
@@ -45,5 +45,30 @@ productsDiv.addEventListener("click", (event) => {
   }
 });
 
-const calculateProductPrice = () => {};
-const calculateCartPrice = () => {};
+const calculateProductPrice = (clickedBtn) => {
+  const productInfoDiv = clickedBtn.parentElement.parentElement;
+  const price = productInfoDiv.querySelector(".product-price strong").innerText;
+  const quantity = productInfoDiv.querySelector(".quantity").innerText;
+  const productTotalDiv = productInfoDiv.querySelector(".product-line-price");
+  productTotalDiv.innerText = (price * quantity).toFixed(2);
+  //   alert(quantity);
+};
+const calculateCartPrice = () => {
+  const productsTotalPricesDivs = document.querySelectorAll(
+    ".product-line-price"
+  );
+  //* foreach ==> NodeList, Array
+  //   const productsTotalPriceDivs =
+  //     document.productInfoDiv.getElementsByClassName("product-line-price");
+  let subtotal = 0;
+  productsTotalPricesDivs.forEach((div) => {
+    subtotal += parseFloat(div.innerText);
+  });
+  //*console.log(subtotal);
+  const taxPrice = subtotal * localStorage.getItem("taxRate");
+  const shippingPrice =
+    subtotal > 0 && subtotal < localStorage.getItem("shippingFreePrice")
+      ? localStorage.getItem("shippingPrice")
+      : 0;
+  console.log(shippingPrice);
+};
