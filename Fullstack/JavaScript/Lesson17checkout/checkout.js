@@ -25,7 +25,14 @@ productsDiv.addEventListener("click", (event) => {
       calculateCartPrice();
       // event.target.nextElementSibling.innerText--;
     } else {
-      if (confirm("Product will be removed, are you sure?")) {
+      if (
+        confirm(
+          `${
+            event.target.parentElement.parentElement.querySelector("h2")
+              .innerText
+          } will be deleted! Are you sure?`
+        )
+      ) {
         //! Confirm evet-hayir soruyor. Alert direkt uyari dusuyor.
         //*remove 3. kusaktan parent siliyoruz
         event.target.parentElement.parentElement.parentElement.remove();
