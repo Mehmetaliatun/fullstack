@@ -393,6 +393,59 @@
 // // printing the string
 // console.log(string);
 
+//********************** Fonksiyonlar */
+
+// function helloWorld() {
+//   console.log("Hello World");
+// }
+// function hello() {
+//   console.log("Merhaba");
+//   helloWorld();
+// }
+
+// let userName = prompt("Enter your name");
+// let age = prompt("Enter your age");
+// function userCheck() {
+//   if (userName && age >= 18) {
+//     alert("You can enroll the driving licence");
+//   } else if (!userName) {
+//     alert("We need your name!");
+//   } else if (!(age >= 18)) {
+//     alert("You must enter your age or your age is under 18!");
+//   }
+// }
+// userCheck();
+// hello(); //? fonk calistirmak
+
+// function factorial(n) {
+//   let answer = 1;
+//   if (n == 0 || n == 1) {
+//     return answer;
+//   } else {
+//     for (let i = n; i >= 1; i--) {
+//       answer = answer * i;
+//     }
+//     return answer;
+//   }
+// }
+// let n = prompt("enter a number want to show factorial");
+// answer = factorial(n);
+// console.log(answer);
+
+function faktoriyel(e) {
+  let sonuc = 1;
+  if (e == 0 || e == 1) {
+    return sonuc;
+  } else {
+    for (let i = e; i >= 1; i--) {
+      sonuc = sonuc * i;
+    }
+    return sonuc;
+  }
+}
+let e = prompt("enter a number");
+sonuc = faktoriyel(e);
+console.log(sonuc);
 //! 1. Print all even numbers from 0 – 10
 // Try to make the solution to this problem as efficiently as possible. Consider using loops that would allow you to type the fewest characters/commands. While you could simply print the even numbers, get creative and see how you could output them in a way that would work up to 10 or even up to 10,000 with little extra effort.
 
@@ -432,5 +485,4 @@
 // let sonuc = kare * kare;
 // console.log(`${kare} * ${kare} = ${sonuc} `);
 
-let knot = 1852;
-let;
+// const arr1 = prompt("Bir sayi giriniz");
