@@ -3,6 +3,7 @@
 // const shippingFreePrice = 300;
 
 window.addEventListener("load", () => {
+  calculateCartPrice();
   //*set items to LocalStorage
   //   localStorage.setItem("taxRate", taxRate);
   //   localStorage.setItem("shippingPrice", shippingPrice);
