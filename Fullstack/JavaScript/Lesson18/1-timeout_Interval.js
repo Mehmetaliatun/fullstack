@@ -38,3 +38,13 @@
 //   console.log("1sn ");
 // }, 1000);
 // console.log("Timeout bitti");
+//* Asenkron (setInterval, clearInterval)
+//* ------------------------------------------------
+// let counter = 0;
+// const intervalId = setInterval(() => {
+//   console.log(++counter, "Şaka yükleniyor");
+//   if (counter > 4) {
+//     clearInterval(intervalId);
+//     console.log("Nasıl ama :)");
+//   }
+// }, 1000);
