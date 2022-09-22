@@ -30,3 +30,11 @@
 // bekle(3000); //! blocking code
 // console.timeEnd("timer");
 // console.log("FS12");
+//* Asenkron (setTimeout)
+//* ------------------------------------------------
+
+// console.log("Timeout");
+// setTimeout(() => {
+//   console.log("1sn ");
+// }, 1000);
+// console.log("Timeout bitti");
