@@ -432,20 +432,22 @@
 // answer = factorial(n);
 // console.log(answer);
 
-function faktoriyel(e) {
-  let sonuc = 1;
-  if (e == 0 || e == 1) {
-    return sonuc;
-  } else {
-    for (let i = e; i >= 1; i--) {
-      sonuc = sonuc * i;
-    }
-    return sonuc;
-  }
-}
-let e = prompt("enter a number");
-sonuc = faktoriyel(e);
-console.log(sonuc);
+//? fakt.
+
+// function faktoriyel(e) {
+//   let sonuc = 1;
+//   if (e == 0 || e == 1) {
+//     return sonuc;
+//   } else {
+//     for (let i = e; i >= 1; i--) {
+//       sonuc = sonuc * i;
+//     }
+//     return sonuc;
+//   }
+// }
+// let e = prompt("enter a number");
+// sonuc = faktoriyel(e);
+// console.log(sonuc);
 //! 1. Print all even numbers from 0 – 10
 // Try to make the solution to this problem as efficiently as possible. Consider using loops that would allow you to type the fewest characters/commands. While you could simply print the even numbers, get creative and see how you could output them in a way that would work up to 10 or even up to 10,000 with little extra effort.
 
@@ -486,3 +488,28 @@ console.log(sonuc);
 // console.log(`${kare} * ${kare} = ${sonuc} `);
 
 // const arr1 = prompt("Bir sayi giriniz");
+
+// let x = 0;
+// async function test() {
+//   x += await 2;
+//   console.log(x);
+// }
+// test();
+// x += 1;
+// console.log(x);
+
+// console.log("I");
+// setTimeout(() => {
+//   console.log("love");
+// }, 0);
+// console.log("Javascript!");
+
+// var v = 1;
+// var f1 = function () {
+//   console.log(v);
+// };
+// var f2 = function () {
+//   var v = 2;
+//   f1();
+// };
+// f2();
