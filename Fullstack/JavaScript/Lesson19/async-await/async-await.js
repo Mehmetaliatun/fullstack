@@ -25,7 +25,7 @@
 let isError = false;
 
 const getNews = async function () {
-  const API_KEY = "a0d2399e111b4b138fbf4cbe9d5c4be5";
+  const API_KEY = ""; //! api key is in another doc.
   const url =
     "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + API_KEY;
 
