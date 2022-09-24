@@ -115,30 +115,48 @@ const selectOperation = (e) => {
   currentArea.innerText = "";
 };
 
-const calculate = () => {
+// const calculate = () => {
+//   const currentValue = parseFloat(currentArea.innerText);
+//   const previousValue = parseFloat(previousArea.innerText.slice(0, -1));
+//   let calcValue;
+//   if (previousArea.innerText.includes("+")) {
+//     calcValue = currentValue + previousValue;
+//     previousArea.innerText = "";
+//     currentArea.innerText = calcValue;
+//   }
+//   if (previousArea.innerText.includes("-")) {
+//     calcValue = currentValue - previousValue;
+//     previousArea.innerText = "";
+//     currentArea.innerText = calcValue;
+//   }
+//   if (previousArea.innerText.includes("x")) {
+//     calcValue = currentValue * previousValue;
+//     previousArea.innerText = "";
+//     currentArea.innerText = calcValue;
+//   }
+//   if (previousArea.innerText.includes("/")) {
+//     calcValue = previousValue / currentValue;
+//     previousArea.innerText = "";
+//     currentArea.innerText = calcValue;
+//   }
+// };
+
+const calculate = (operation) => {
   const currentValue = parseFloat(currentArea.innerText);
   const previousValue = parseFloat(previousArea.innerText.slice(0, -1));
   let calcValue;
-  if (previousArea.innerText.includes("+")) {
+
+  if (operation === "+") {
     calcValue = currentValue + previousValue;
-    previousArea.innerText = "";
-    currentArea.innerText = calcValue;
-  }
-  if (previousArea.innerText.includes("-")) {
-    calcValue = currentValue - previousValue;
-    previousArea.innerText = "";
-    currentArea.innerText = calcValue;
-  }
-  if (previousArea.innerText.includes("x")) {
+  } else if (operation === "-") {
+    calcValue = previousValue - currentValue;
+  } else if (operation === "x") {
     calcValue = currentValue * previousValue;
-    previousArea.innerText = "";
-    currentArea.innerText = calcValue;
-  }
-  if (previousArea.innerText.includes("/")) {
+  } else if (operation === "/") {
     calcValue = previousValue / currentValue;
-    previousArea.innerText = "";
-    currentArea.innerText = calcValue;
   }
+  currentArea.innerText = calcValue;
+  previousArea.innerText = "";
 };
 
 const result = () => {
