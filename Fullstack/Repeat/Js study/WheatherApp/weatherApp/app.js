@@ -47,3 +47,9 @@ const getWeatherData = async () => {
     form.reset();
   }
 };
+
+resultArea.onclick = (e) => {
+  if (e.target.className === "closeIcon") {
+    e.target.closest(".city").remove();
+  }
+};
