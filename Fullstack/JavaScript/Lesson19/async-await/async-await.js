@@ -22,6 +22,8 @@
 //! Micro
 //! Makro
 
+let isError = false;
+
 const getNews = async function () {
   const API_KEY = "a0d2399e111b4b138fbf4cbe9d5c4be5";
   const url =
@@ -30,7 +32,8 @@ const getNews = async function () {
   try {
     const res = await fetch(url);
     if (!res.ok) {
-      throw new Error(`Something went wrong ${res.status}`);
+      isError = true;
+      //   throw new Error(`Something went wrong ${res.status}`);
     }
     const data = await res.json();
     // console.log(data.articles);
@@ -38,11 +41,16 @@ const getNews = async function () {
   } catch (error) {
     console.log(error);
   }
-
-  //   console.log(res);
 };
 const renderNews = (news) => {
   const newsList = document.getElementById("news-list");
+  if (isError) {
+    newsList.innerHTML += `
+        <h2>News Can not be fetched</h2>
+        <img src="./img/404.png" alt="" />
+        `;
+    return;
+  }
   news.forEach((item) => {
     const { title, description, urlToImage, url } = item; //!dest.
     newsList.innerHTML += `
