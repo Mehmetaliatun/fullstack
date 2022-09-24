@@ -104,6 +104,8 @@ const deleteCurrentArea = (e) => {
     currentArea.innerText = currentArea.innerText.slice(0, -1);
   }
 };
+
+//! burada problem var.
 const selectOperation = (e) => {
   if (currentArea.innerText === "") return;
   if (previousArea.innerText !== "") {
