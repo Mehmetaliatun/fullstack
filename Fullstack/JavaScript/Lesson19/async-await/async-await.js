@@ -25,7 +25,7 @@
 const getNews = async function () {
   const API_KEY = "a0d2399e111b4b138fbf4cbe9d5c4be5";
   const url =
-    "https://newsapi.org/v2/top-headlines?country=tr&apiKey=" + API_KEY;
+    "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + API_KEY;
 
   try {
     const res = await fetch(url);
@@ -46,8 +46,8 @@ const renderNews = (news) => {
   news.forEach((item) => {
     const { title, description, urlToImage, url } = item; //!dest.
     newsList.innerHTML += `
-    
-        <div class="card" style="width: 18rem;">
+    <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="card" >
         <img src="${urlToImage}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">${title}</h5>
@@ -55,7 +55,7 @@ const renderNews = (news) => {
             <a href="${url}" class="btn btn-primary">Details</a>
         </div>
     </div>
-    
+    </div>
     `;
   });
 };
