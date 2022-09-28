@@ -516,39 +516,67 @@
 
 //* Fonksiyona Parametre atamak */
 
-let firstName = "Lorem";
+// let firstName = "Lorem";
 
-function greetings(firstName = "", lastName = "") {
-  //* default parametre aliyor
-  //   console.log(`merhaba, ${firstName ? firstName : ""}`);
-  console.log(`merhaba, ${firstName}`);
-  console.log(`merhaba, ${firstName} ${lastName}`);
+// function greetings(firstName = "", lastName = "") {
+//   //* default parametre aliyor
+//   //   console.log(`merhaba, ${firstName ? firstName : ""}`);
+//   console.log(`merhaba, ${firstName}`);
+//   console.log(`merhaba, ${firstName} ${lastName}`);
+// }
+
+// console.log(firstName); //* degisken
+// // firstName = prompt("adın");
+// // lastName = prompt("soyadin");
+// // greetings(firstName, lastName);
+// greetings(); //* fonksiyona parametre gondermedik ??
+// greetings("parametre");
+
+// function greetings2(firstName, lastName) {
+//   let info = `merhaba ${firstName} ${lastName}`;
+//   return info;
+// }
+
+// let greetingsInfo = greetings2("ad", "soyad");
+// // let info = "deneme";
+// console.log(greetingsInfo);
+
+// function domIdWriteInfo(id, info) {
+//   //   let domObject = document.querySelector(`#greeting`);
+//   let domObject = document.querySelector(`#${id}`);
+//   domObject.innerHTML = info;
+// }
+
+// let htmlInfo = `<span style="color:red">Color RED</span>`;
+
+// // domIdWriteInfo("greeting", greetings2("mehmet", "ali"));
+// domIdWriteInfo("greeting", htmlInfo);
+// domIdWriteInfo("info", greetings2("lorem", "ipsum"));
+
+//* Arrow function*/
+
+function hello(firstName) {
+  console.log(`Welcome, ${firstName}`);
 }
 
-console.log(firstName); //* degisken
-// firstName = prompt("adın");
-// lastName = prompt("soyadin");
-// greetings(firstName, lastName);
-greetings(); //* fonksiyona parametre gondermedik ??
-greetings("parametre");
+hello("Hardest coding language is Js :)");
 
-function greetings2(firstName, lastName) {
-  let info = `merhaba ${firstName} ${lastName}`;
+const helloFuncV1 = (firstName) => {
+  console.log(`Welcome, ${firstName}`);
+};
+helloFuncV1("helloFuncV1");
+
+const helloFuncV2 = (firstName) => console.log(`Welcome, ${firstName}`); //* 1 parametre, 1 donus islemi
+helloFuncV2("helloFuncV2");
+
+const helloFuncV3 = (firstName, lastName) =>
+  console.log(`Welcome, ${firstName} ${lastName}`); //* console.log parantezi
+helloFuncV3("helloFuncV2", "last name info");
+
+const helloFuncV4 = (firstName, lastName) => {
+  let info = `Welcome, ${firstName} ${lastName}`;
+  console.log(info);
   return info;
-}
+};
 
-let greetingsInfo = greetings2("ad", "soyad");
-// let info = "deneme";
-console.log(greetingsInfo);
-
-function domIdWriteInfo(id, info) {
-  //   let domObject = document.querySelector(`#greeting`);
-  let domObject = document.querySelector(`#${id}`);
-  domObject.innerHTML = info;
-}
-
-let htmlInfo = `<span style="color:red">Color RED</span>`;
-
-// domIdWriteInfo("greeting", greetings2("mehmet", "ali"));
-domIdWriteInfo("greeting", htmlInfo);
-domIdWriteInfo("info", greetings2("lorem", "ipsum"));
+helloFuncV4("helloFuncV4", "other info");
