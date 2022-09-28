@@ -513,3 +513,42 @@
 //   f1();
 // };
 // f2();
+
+//* Fonksiyona Parametre atamak */
+
+let firstName = "Lorem";
+
+function greetings(firstName = "", lastName = "") {
+  //* default parametre aliyor
+  //   console.log(`merhaba, ${firstName ? firstName : ""}`);
+  console.log(`merhaba, ${firstName}`);
+  console.log(`merhaba, ${firstName} ${lastName}`);
+}
+
+console.log(firstName); //* degisken
+// firstName = prompt("adın");
+// lastName = prompt("soyadin");
+// greetings(firstName, lastName);
+greetings(); //* fonksiyona parametre gondermedik ??
+greetings("parametre");
+
+function greetings2(firstName, lastName) {
+  let info = `merhaba ${firstName} ${lastName}`;
+  return info;
+}
+
+let greetingsInfo = greetings2("ad", "soyad");
+// let info = "deneme";
+console.log(greetingsInfo);
+
+function domIdWriteInfo(id, info) {
+  //   let domObject = document.querySelector(`#greeting`);
+  let domObject = document.querySelector(`#${id}`);
+  domObject.innerHTML = info;
+}
+
+let htmlInfo = `<span style="color:red">Color RED</span>`;
+
+// domIdWriteInfo("greeting", greetings2("mehmet", "ali"));
+domIdWriteInfo("greeting", htmlInfo);
+domIdWriteInfo("info", greetings2("lorem", "ipsum"));
