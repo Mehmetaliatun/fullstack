@@ -555,28 +555,28 @@
 
 //* Arrow function*/
 
-function hello(firstName) {
-  console.log(`Welcome, ${firstName}`);
-}
+// function hello(firstName) {
+//   console.log(`Welcome, ${firstName}`);
+// }
 
-hello("Hardest coding language is Js :)");
+// hello("Hardest coding language is Js :)");
 
-const helloFuncV1 = (firstName) => {
-  console.log(`Welcome, ${firstName}`);
-};
-helloFuncV1("helloFuncV1");
+// const helloFuncV1 = (firstName) => {
+//   console.log(`Welcome, ${firstName}`);
+// };
+// helloFuncV1("helloFuncV1");
 
-const helloFuncV2 = (firstName) => console.log(`Welcome, ${firstName}`); //* 1 parametre, 1 donus islemi
-helloFuncV2("helloFuncV2");
+// const helloFuncV2 = (firstName) => console.log(`Welcome, ${firstName}`); //* 1 parametre, 1 donus islemi
+// helloFuncV2("helloFuncV2");
 
-const helloFuncV3 = (firstName, lastName) =>
-  console.log(`Welcome, ${firstName} ${lastName}`); //* console.log parantezi
-helloFuncV3("helloFuncV2", "last name info");
+// const helloFuncV3 = (firstName, lastName) =>
+//   console.log(`Welcome, ${firstName} ${lastName}`); //* console.log parantezi
+// helloFuncV3("helloFuncV2", "last name info");
 
-const helloFuncV4 = (firstName, lastName) => {
-  let info = `Welcome, ${firstName} ${lastName}`;
-  console.log(info);
-  return info;
-};
+// const helloFuncV4 = (firstName, lastName) => {
+//   let info = `Welcome, ${firstName} ${lastName}`;
+//   console.log(info);
+//   return info;
+// };
 
-helloFuncV4("helloFuncV4", "other info");
+// helloFuncV4("helloFuncV4", "other info");
