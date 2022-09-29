@@ -36,6 +36,8 @@ const book2 = new Book("Sinekli Bakkal", "Halide Edip Adivar", 1930);
 //! olusan tum instance'larin belleginde yer kaplamamasi ancak tum
 //! instance'larin bu metota ulasabilmesidir.
 
+//!prototype'taki fonksiyon ortak kullaniliyor. Her birine yeniden tanimlanmiyor. Boylece bellek verimli kullaniliyor.
+
 Book.prototype.getSummary = function () {
   return `${this.title} was written by ${this.author} in ${this.year}`;
 };
@@ -62,3 +64,20 @@ Book.prototype.getAge = function () {
 console.log(book1, book2);
 console.log(book1.getAge());
 console.log(book2.getAge());
+
+//? INHERITANCE (Kalitim -ES5)
+//?----------------------------------------------------------------
+
+//? Sub-Class
+
+function Magazine(title, author, year, month) {
+  Book.call(this, title, author, year); //!Cagriliyor fakat yeni bir obje
+  this.month = month;
+}
+
+Magazine.prototype = Object.create(Book.prototype);
+//? Magazine objesinin yeni bir instancesi
+const mag1 = new Magazine("Scientific Research", "Einstein", 1926, "Sep");
+console.log(mag1);
+
+console.log(mag1.getSummary());
