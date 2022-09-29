@@ -39,8 +39,13 @@ class Magazine extends Book {
   getSummary() {
     return `${this.title} was written by ${this.author} in ${this.year} in ${this.month}`;
   }
+  //!Override edilmis bir parent fonksiyonunu kullanmak icin super keyword'u kullanilabilir.
+  getSummaryParent() {
+    return super.getSummary();
+  }
 }
 
 //? Magazine objesinin yeni bir instancesi
 const mag1 = new Magazine("Scientific Research", "Einstein", 1926, "September");
 console.log(mag1.getSummary());
+console.log(mag1.getSummaryParent());
