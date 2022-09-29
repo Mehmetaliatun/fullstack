@@ -40,3 +40,15 @@ console.log(book1.getAge());
 console.log(book1.getSummary());
 
 //? Sub-Class tabimlamasi (Inheritance)
+
+class Magazine extends Book {
+  //! Book'un constructor'i cagrildi.
+  constructor(title, author, year, month) {
+    super(title, author, year); //!parent constructor'dan (Book) aliyor.
+    this.month = month; //! Burasi direkt (Magazine) constructor icinde.
+  }
+}
+
+//? Magazine objesinin yeni bir instancesi
+const mag1 = new Magazine("Scientific Research", "Einstein", 1926, "Sep");
+console.log(mag1);
