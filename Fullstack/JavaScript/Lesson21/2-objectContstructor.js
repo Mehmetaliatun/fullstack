@@ -30,14 +30,22 @@ const book1 = new Book("Kasagi", "Omer Seyfettin", 1920);
 //?instance
 const book2 = new Book("Sinekli Bakkal", "Halide Edip Adivar", 1930);
 
+//! Prototype, belirli bir Nesne'nin (Object) tum instance'larina
+//! kolay bir sekilde metotlar tanimlamaya izin vermektedir.
+//! Prototip alaninda bir metot tanimlamanin avantaji bu metot'un
+//! olusan tum instance'larin belleginde yer kaplamamasi ancak tum
+//! instance'larin bu metota ulasabilmesidir.
+
 Book.prototype.getSummary = function () {
   return `${this.title} was written by ${this.author} in ${this.year}`;
 };
 
+Book.prototype.price = 100;
+// book1.price = 100;
+
 console.log(book1);
 console.log(book1.getSummary());
 console.log(book2);
-book1.price = 100;
 console.log(book1, book2);
 
 Book.prototype.getAge = function () {
