@@ -74,10 +74,15 @@ function Magazine(title, author, year, month) {
   Book.call(this, title, author, year); //!Cagriliyor fakat yeni bir obje
   this.month = month;
 }
-
+//! Prototyp'leri miras olarak almak icin Object.create() metodu kullanilabilir.
 Magazine.prototype = Object.create(Book.prototype);
 //? Magazine objesinin yeni bir instancesi
 const mag1 = new Magazine("Scientific Research", "Einstein", 1926, "Sep");
 console.log(mag1);
 
+//! prototyp'ler dogrudan miras olarak gelmez.
 console.log(mag1.getSummary());
+console.log(mag1.getAge());
+console.log(mag1.price);
+
+//* js:dinamic, single threaded, high level, prototype base, object oriented
