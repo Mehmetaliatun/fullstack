@@ -52,3 +52,8 @@ class Magazine extends Book {
 //? Magazine objesinin yeni bir instancesi
 const mag1 = new Magazine("Scientific Research", "Einstein", 1926, "Sep");
 console.log(mag1);
+
+//! Soyutlama (Abstraction)
+//! Kapsülleme (Encapsulation)
+//! Miras Alma (Inheritance)
+//! Çok Biçimlilik (Polymorphism)
