@@ -27,3 +27,20 @@ class Book {
     return `${this.title} was written by ${this.author} in ${this.year}`;
   }
 }
+//? Sub-Class tabimlamasi (Inheritance)
+class Magazine extends Book {
+  //! Book'un constructor'i cagrildi.
+  constructor(title, author, year, month) {
+    super(title, author, year); //!parent constructor'dan (Book) aliyor.
+    this.month = month; //! Burasi direkt (Magazine) constructor icinde.
+  }
+  //!Overrided metot (parent class'taki bir metodun farkli
+  //! fonksiyonellikle fakat ayni isimle tanimlanmasi)
+  getSummary() {
+    return `${this.title} was written by ${this.author} in ${this.year} in ${this.month}`;
+  }
+}
+
+//? Magazine objesinin yeni bir instancesi
+const mag1 = new Magazine("Scientific Research", "Einstein", 1926, "September");
+console.log(mag1.getSummary());
