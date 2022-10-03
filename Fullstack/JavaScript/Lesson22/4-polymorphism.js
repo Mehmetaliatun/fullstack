@@ -33,6 +33,27 @@ class Book {
   }
 }
 
+// class Car {
+//   constructor(brand, country, year2) {
+//     this.brand = brand;
+//     this.country = country;
+//     this.year2 = year2;
+
+//     this.getBrand = function () {
+//       return this.brand;
+//     };
+//   }
+//   getAge2() {
+//     return new Date().getFullYear() - this.year2;
+//   }
+//   getSum() {
+//     return `${this.brand} was produced in ${this.country} in ${this.year2}`;
+//   }
+// }
+
+// const car1 = new Car("Audi", "Germany", 1987);
+// console.log(car1.getSum());
+
 //? Sub-Class tanimlamasi (Inheritance)
 class Magazine extends Book {
   constructor(title, author, year, month) {
