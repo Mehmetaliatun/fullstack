@@ -1,0 +1,11 @@
+node -v :versiyon kontrol
+npm -v :kontrol
+npm init -y :package json
+
+--yükleme--
+npm install jest
+npm i jest
+
+--dev yükleme--
+npm install --save-dev jest
+npm i jest -D
