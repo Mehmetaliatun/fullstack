@@ -580,3 +580,33 @@
 // };
 
 // helloFuncV4("helloFuncV4", "other info");
+
+// let input = document.getElementById("input");
+// let output = document.getElementById("output");
+
+// input.addEventListener("click", function (event) {
+//   output.innerText = event.target.value.split("").join("");
+//   console.log("calisiyor");
+// });
+
+// let counter = 0;
+// let counterDOM = document.querySelector("#counter");
+// let arttirDOM = document.querySelector("#arttir");
+// let azaltDOM = document.querySelector("#azalt");
+
+// counterDOM.innerHTML = counter;
+// azaltDOM.addEventListener("click", clickEvent);
+// arttirDOM.addEventListener("click", clickEvent);
+
+// function clickEvent() {
+//   console.log(this.id);
+//   this.id == "arttir"
+//     ? (counterDOM.innerHTML = counter += 1)
+//     : (counterDOM.innerHTML = counter -= 1);
+// }
+//! 2.yontem
+// function clickEvent() {
+//   console.log(this.id);
+//   this.id == "arttir" ? (counter += 1) : (counter -= 1);
+//   counterDOM.innerHTML = counter;
+// }

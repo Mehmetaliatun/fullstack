@@ -1,6 +1,8 @@
 node -v :versiyon kontrol
 npm -v :kontrol
-npm init -y :package json
+npm init -y :package json dosyası oluşturma
+
+package json aç ve test içine "jest --coverage" yaz
 
 --yükleme--
 npm install jest
