@@ -108,8 +108,15 @@ const getWeatherDataFromApi = async () => {
             <img class="city-icon" src="${iconUrl}">
             <figcaption>${weather[0].description}</figcaption>
         </figure>`);
-
+      //*append vs. prepend both in JS AND JQUERY
       listJQ.prepend(createdLi);
+
+      //*Jquery Samples
+      $(".city img").click((e) => {
+        //*getAttribute, setAttribute ==> attr
+        $(e.target).attr("src", iconUrlAWS);
+      });
+
       //   formJS.reset();
       formJquery.trigger("reset");
     },
