@@ -73,8 +73,45 @@ const getWeatherDataFromApi = async () => {
       //* js => document.createElement("li")
 
       //   const createdLi2=$(document.createElement("li"))
+
+      //!weather card control!!
+
+      const cityCardList = listJQ.find(".city");
+      const cityCardListArray = cityCardList.get();
+
+      //console.log(cityCardList);
+
+      if (cityCardListArray.length > 0) {
+        const filteredArray = cityCardListArray.filter(
+          (li) => $(li).find("span").text() == name
+        );
+        if (filteredArray.length > 0) {
+          //*innerText
+          msgJQ.text(
+            `You already know the weather for ${name}, Please search for another city 😉`
+          );
+          //*Style
+          msgJQ.css({ color: "red", "text-decoration": "underline" });
+          return;
+        }
+      }
+
       const createdLi = $("<li></li>");
       createdLi.addClass("city");
+      createdLi.html(`
+        <h2 class="city-name" data-name="${name}, ${sys.country}">
+            <span>${name}</span>
+            <sup>${sys.country}</sup>
+        </h2>
+        <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
+        <figure>
+            <img class="city-icon" src="${iconUrl}">
+            <figcaption>${weather[0].description}</figcaption>
+        </figure>`);
+
+      listJQ.prepend(createdLi);
+      //   formJS.reset();
+      formJquery.trigger("reset");
     },
     beforeSend: (request) => {
       console.log("before ajax send");
@@ -83,7 +120,12 @@ const getWeatherDataFromApi = async () => {
       console.log("after ajax send");
     },
     error: (XMLHttpRequest) => {
+      //*logging
+      //*postErrorLog()
       console.log(XMLHttpRequest);
+      msgJQ.text(`${XMLHttpRequest.status} ${XMLHttpRequest.statusText}`);
+      //*Styling
+      msgJQ.css({ color: "red", "text-decoration": "underline" });
     },
   });
 };
