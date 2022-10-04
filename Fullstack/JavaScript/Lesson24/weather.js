@@ -121,7 +121,7 @@ const getWeatherDataFromApi = async () => {
     },
     error: (XMLHttpRequest) => {
       //*logging
-      //*postErrorLog()
+      //*postErrorLog(p1,p2,p3,p4)
       console.log(XMLHttpRequest);
       msgJQ.text(`${XMLHttpRequest.status} ${XMLHttpRequest.statusText}`);
       //*Styling
