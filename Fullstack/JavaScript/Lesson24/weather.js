@@ -12,6 +12,8 @@ console.log(inputJQ);
 
 //* get(index)=> toArray(get()), eq(index)
 
+//! dom content window content fark, ajax onemli mulakatta cikar
+
 //* load vs DOMContentLoaded
 //* DOMContentLoaded ===> means page rendered, DOM is ready
 //* window load ==> (all content (e.g. images, styles etc.) also loaded)
@@ -31,10 +33,7 @@ $(window).on("load", () => {
 // });
 $(document).ready(() => {
   console.log("DOMContentLoaded");
-  localStorage.setItem(
-    "apiKey",
-    EncryptStringAES("3e806d80c568686174a6520843cb0c11")
-  );
+  localStorage.setItem("apiKey", EncryptStringAES("//*in another doc"));
 });
 
 // formJquery.on("submit", (e) => {
@@ -112,15 +111,38 @@ const getWeatherDataFromApi = async () => {
       listJQ.prepend(createdLi);
 
       //*Jquery Samples
-      $(".city img").click((e) => {
-        //*getAttribute, setAttribute ==> attr
-        $(e.target).attr("src", iconUrlAWS);
-      });
+      //   $(".city img").click((e) => {
+      //     //*getAttribute, setAttribute ==> attr
+      //     window.location.href = $(e.target).attr("src");
+      //     // $(e.target).attr("src", iconUrlAWS);
+      //   });
+
+      //*Animation
+      //   $(".city").click((e) => {
+      //     $(e.target).animate({ left: "250px" });
+      //   });
+
+      //*Jquery chaining slideUp vs. slideDown
+      //   $(".city img").click((e) => {
+      //     $(e.target).slideUp(2000).slideDown(2000);
+      //   });
+      //*hide() vs. show()
+      //   $(".city img").click((e) => {
+      //     $(e.target).hide();
+      //   });
+      //*show()
+      //   $(".city").click((e) => {
+      //     $(e.target.parentElement).find("img").show();
+      //   });
 
       //   formJS.reset();
       formJquery.trigger("reset");
     },
     beforeSend: (request) => {
+      //*Encyrption
+      //*header/body
+      //*request.header("..", "..")
+      //*token
       console.log("before ajax send");
     },
     complete: () => {

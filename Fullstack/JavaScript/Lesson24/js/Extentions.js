@@ -45,4 +45,13 @@ const removeLoading = () => {
 };
 const postErrorLog = (location, errorText, funcName, statusCode) => {
   //!ajax post => hata ile ilgili tum bilgiler alinir.
+  //   $.ajax({
+  //     type: "POST",
+  //     url: url,
+  //     dataType: "json",
+  //     success: (response) => {},
+  //     beforeSend: (request) => {},
+  //     complete: () => {},
+  //     error: (XMLHttpRequest) => {},
+  //   });
 };
