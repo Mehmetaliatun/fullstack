@@ -1,12 +1,10 @@
-const Person = () => {
+const Person = (props) => {
+  const { name, img, tel } = props;
   return (
     <div>
-      <p>Merhaba Atun</p>
-      <img
-        src="https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947__480.jpg"
-        alt="img1"
-      />
-      <p>55555555555</p>
+      <p>Merhaba {name}</p>
+      <img src={img} alt="img1" />
+      <p>{tel}</p>
     </div>
   );
 };
