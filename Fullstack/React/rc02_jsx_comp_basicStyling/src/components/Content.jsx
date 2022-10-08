@@ -14,13 +14,14 @@ import "./Content.css";
 import img2 from "../img/atam.jpg";
 
 const Content = () => {
-  //* JSX alani
+  //* JS alani
   const imgStyle = {
     display: "block",
     width: "300px",
     margin: "1rem auto",
   };
   return (
+    //* JSX alani
     <div>
       {/* inline style */}
 
