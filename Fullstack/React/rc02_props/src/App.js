@@ -6,10 +6,10 @@ import data from "./data";
 function App() {
   return (
     <div>
-      <h1>PROPS</h1>
+      {/* <h1>PROPS</h1>
       <Msg name="Mehmet" age={5} />
       <Msg name="Ali" />
-      <Msg name="Atun" />
+      <Msg name="Atun" /> */}
       {/* {Msg({ name: "Yaren" })} */}
       <Person name={data[0].name} img={data[0].img} tel={data[0].tel} />
       <Person name={data[1].name} img={data[1].img} tel={data[1].tel} />
