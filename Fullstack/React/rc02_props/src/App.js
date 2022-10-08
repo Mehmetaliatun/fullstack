@@ -1,5 +1,6 @@
 import React from "react";
 import Msg from "./components/Msg";
+import Person from "./components/Person";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Msg name="Ali" />
       <Msg name="Atun" />
       {/* {Msg({ name: "Yaren" })} */}
+      <Person />
     </div>
   );
 }
