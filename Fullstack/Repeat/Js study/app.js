@@ -610,3 +610,7 @@
 //   this.id == "arttir" ? (counter += 1) : (counter -= 1);
 //   counterDOM.innerHTML = counter;
 // }
+let age = 24;
+let permission = age >= 18 ? "Giriş yapabilirsiniz." : "Giriş yapamazsınız.";
+
+console.log(permission);
