@@ -1,8 +1,11 @@
 import React from "react";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+
 //? React.JSX kullanmaktadir.
 //? JSX icinde, html elementleri dogrudan js olarak kullanilabilir.
 
-import Header from "./components/Header";
 //! Componentler, HTML,CSS ve JS kodlarindan meydana gelmiş
 //! bir kod parcacigidir.
 //! Bir componentin return () kismi ise JSX kodlari icerir.
@@ -15,7 +18,13 @@ import Header from "./components/Header";
 //? App componetinin tanimlanmasi
 
 function App() {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <Content />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
