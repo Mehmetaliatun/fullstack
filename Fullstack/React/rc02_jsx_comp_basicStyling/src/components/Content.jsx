@@ -12,8 +12,10 @@
 const Content = () => {
   return (
     <div>
-      <h2>React JS</h2>
-      <p>
+      {/* inline style */}
+
+      <h2 style={{ color: "red" }}>React JS</h2>
+      <p style={{ backgroundColor: "lightgreen" }}>
         React, Kullanici arabirimi tasarlamak icin kullanilan bir JS
         kütüphanesidir.
       </p>
