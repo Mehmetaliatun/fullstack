@@ -1,9 +1,16 @@
 import Card from "./components/card/Card";
+import data from "./util/data";
 
 function App() {
+  //! Js alani
   return (
+    //! Jsx alani(bir nevi html alani)
     <>
-      <Card />
+      {data.map((item) => {
+        console.log(item);
+        const { id, language, img, btnName } = item; //! dest
+        return <Card language={language} img={img} btn={btnName} />;
+      })}
     </>
   );
 }
