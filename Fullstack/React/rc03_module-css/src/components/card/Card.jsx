@@ -1,5 +1,6 @@
 import Buton from "../buton/Buton";
-import "./Card.css";
+// import "./Card.css";
+import CardStyle from "./card.module.css";
 
 const Card = ({ language, btn, img }) => {
   //   console.log(props);
