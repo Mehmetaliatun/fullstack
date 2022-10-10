@@ -9,7 +9,7 @@ function App() {
       {data.map((item) => {
         console.log(item);
         const { id, language, img, btnName } = item; //! dest
-        return <Card language={language} img={img} btn={btnName} />;
+        return <Card key={id} language={language} img={img} btn={btnName} />;
       })}
     </>
   );
