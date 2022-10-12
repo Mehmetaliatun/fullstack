@@ -50,7 +50,10 @@ const UseStateCounter = () => {
     //! Bu sekilde atama yapma.
     //! Bu sekilde atama ile sayisal deger state'in uzerine yazilmis oldu
     //! Dolayisiyla obje yapisi bozuldu.
-    setPerson(person.age + 1);
+    // setPerson(person.age + 1);
+    // setPerson({ name: "Mehmet", surname: "Atub", age: 44 });
+
+    setPerson({ ...person, age: person.age + 1 });
   };
   console.log(person);
   return (
