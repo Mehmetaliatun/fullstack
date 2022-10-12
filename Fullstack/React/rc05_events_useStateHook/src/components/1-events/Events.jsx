@@ -11,6 +11,8 @@
 //? Ayrinti icin : https://reactjs.org/docs/events.html
 
 const Events = () => {
+  let message = "Event Based Program";
+
   const handleClick = () => {
     alert("Button clicked");
   };
@@ -21,10 +23,15 @@ const Events = () => {
 
   const handleChange = (e) => {
     console.log(e.target);
+
+    message = "REACT";
+
+    console.log(message);
   };
 
   return (
     <div className="container text-center mt-4">
+      <h1>{message}</h1>
       <button onClick={handleClick} className="btn btn-success">
         Click
       </button>
