@@ -60,15 +60,17 @@
 //* constructor'in disinda state, setState() metodu ile degistilebilir.
 //* ====================================================================================
 
-import React, { Component } from "react";
+import { Component } from "react";
 
-export class Counter extends Component {
+class Counter extends Component {
   constructor(props) {
     super(props);
+
     //! count state'ine baslangic degeri atadik
     this.state = {
       count: props.count || 0,
     };
+    //? increment metodunun Counter class'ina baglanmasi (bind)
     this.increment = this.increment.bind(this);
   }
   increment() {
@@ -77,19 +79,20 @@ export class Counter extends Component {
     });
   }
 
-  // Yazmis oldugumuz metotlar default olarak classa baglanmaz.
-  // Ancak, React built-in fonksiyonlari baglidir.
+  //! Yazmis oldugumuz metotlar default olarak classa baglanmaz.
+  //! Ancak, React built-in fonksiyonlari baglidir.
 
-  // Bunun icin metotlarimizi ya constructor icerisinde baglamaliyiz ya da otomatik baglamayi saglayan arrow fonksiyonlarini kullanmaliyiz.
+  //* Bunun icin metotlarimizi ya constructor icerisinde baglamaliyiz yada otomatik baglamayi saglayan arrow fonksiyonlarini kullanmaliyiz.
   decrement = () => {
     this.setState({
       count: this.state.count - 1,
     });
   };
+
   render() {
     return (
-      <div className="container text-center mt-4 ">
-        <h1>CLASSFULL COMPONENTS</h1>
+      <div className="container text-center mt-4">
+        <h1>CLASSFUL COMPONENTS</h1>
         <h2 className="display-4 text-danger">COUNT:{this.state.count}</h2>
         <button onClick={this.increment} className="btn btn-success">
           INC
