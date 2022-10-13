@@ -1,9 +1,14 @@
 import { useState } from "react";
 
 const FormObject = () => {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formValues, setFormValues] = useState({
+    username: "",
+    email: "",
+    password: "",
+  }); //! state birlestir obje yap.
+
+  const { username, password, email } = formValues; //!destr. yaparak asagiya uyumlu hale getirdik.
+
   //!useStateSnippet ile otomatik geliyor ve tab ile
   //!2.degiskeni camelCase yapabiliriz.
   const handleSubmit = (e) => {
@@ -14,13 +19,14 @@ const FormObject = () => {
     email:${email}
     password:${password}
     `);
-    setUsername("");
-    setEmail("");
-    setPassword("");
   };
-  const handleUserName = (e) => {
+
+  const handleForm = (e) => {
     console.log(e.target.value);
-    setUsername(e.target.value);
+    console.log(e.target.id);
+    //! objeyi actik ve ilgili key'e gelen degeri aktariyoruz.
+    //!formValues useState'ten geliyor, id jsx'ten geliyor, value ise dom'dan geliyor.
+    setFormValues({ ...formValues, [e.target.id]: e.target.value });
   };
 
   return (
@@ -32,11 +38,12 @@ const FormObject = () => {
           Username: <span className="text-danger">{username} </span>
         </label>
         <input
+          name="username"
           type="text"
           className="form-control"
           id="username"
           value={username}
-          onChange={handleUserName}
+          onChange={handleForm}
         />
       </div>
       <div className="mb-3">
@@ -48,7 +55,7 @@ const FormObject = () => {
           className="form-control"
           id="email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={handleForm}
         />
       </div>
       <div className="mb-3">
@@ -60,7 +67,7 @@ const FormObject = () => {
           className="form-control"
           id="password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={handleForm}
         />
       </div>
 
