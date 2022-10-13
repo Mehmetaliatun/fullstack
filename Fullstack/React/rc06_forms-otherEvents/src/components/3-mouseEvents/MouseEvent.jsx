@@ -1,12 +1,22 @@
+import { useState } from "react";
+
 const MouseEvent = () => {
+  const [showHint, setShowHint] = useState(false);
+  //!boolean degisken olusturuldu, baslangic degeri false verildi.
+  //!uzerine gelince tepki verecek
   return (
     <div className="container text-center d-flex flex-column align-items-center mt-4">
       <h2 className="text-danger">MOUSE EVENTS</h2>
 
-      <div id="todo-1" className="bg-success text-light w-50 p-4">
+      <div
+        id="todo-1"
+        className="bg-success text-light w-50 p-4"
+        onMouseEnter={() => setShowHint(true)}
+        onMouseOut={() => setShowHint(false)}
+      >
         todo item 1
       </div>
-
+      {showHint && <p>Hello React</p>}
       <div id="todo-2" className="bg-success text-light w-50 p-4 mt-4">
         todo item 2
       </div>
