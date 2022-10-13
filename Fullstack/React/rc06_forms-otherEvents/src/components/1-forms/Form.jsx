@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 const Form = () => {
-  const [username, setUsername] = useState("Mehmet");
-  const [email, setEmail] = useState("mehmet@ali.co");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   //!useStateSnippet ile otomatik geliyor ve tab ile
   //!2.degiskeni camelCase yapabiliriz.
@@ -11,9 +11,12 @@ const Form = () => {
     console.log(e.target);
     console.log("Subbmitted");
     alert(`username: ${username}
-    email:${email},
+    email:${email}
     password:${password}
     `);
+    setUsername("");
+    setEmail("");
+    setPassword("");
   };
   const handleUserName = (e) => {
     console.log(e.target.value);
