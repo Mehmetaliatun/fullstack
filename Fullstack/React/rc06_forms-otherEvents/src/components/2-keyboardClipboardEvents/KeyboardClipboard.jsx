@@ -17,8 +17,9 @@ const KeyboardClipboard = () => {
   };
 
   const handleAreaPaste = (e) => {
-    console.log(e.target.value);
-    e.target.value = e.clipboardData.getData("text");
+    e.target.style.border = "2px solid red";
+    e.target.value += e.clipboardData.getData("text").toLocaleUpperCase();
+    e.preventDefault();
   };
 
   return (
@@ -30,6 +31,7 @@ const KeyboardClipboard = () => {
         value={inputValue} //! bu degeri vererek enter'a basinca input siliniyor
         onChange={(e) => {
           e.target.value = e.target.value.toLocaleUpperCase();
+
           //! target'in degerini oku yakala ve tekrar buyuk harf olarak gonder
           setInputValue(e.target.value);
         }}
@@ -37,7 +39,15 @@ const KeyboardClipboard = () => {
         onKeyDown={handleKeyDown}
         //! basildiginde keydown, cekildiginde keyUp
       />
-      <p className="text-start mt-4  ">{inputValue.toLocaleUpperCase()}</p>
+      <p
+        onCopy={(e) => {
+          e.preventDefault();
+          alert("You can't cop this doc");
+        }}
+        className="text-start mt-4  "
+      >
+        {inputValue}
+      </p>
       <textarea
         className="form-control"
         name="area"
