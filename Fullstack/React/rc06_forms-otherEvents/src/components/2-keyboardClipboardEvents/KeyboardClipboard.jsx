@@ -15,6 +15,12 @@ const KeyboardClipboard = () => {
     e.keyCode === 13 && setInputValue("");
     //! bu degeri vererek enter'a basinca set input siliniyor
   };
+
+  const handleAreaPaste = (e) => {
+    console.log(e.target.value);
+    e.target.value = e.clipboardData.getData("text");
+  };
+
   return (
     <div className="container text-center">
       <h1>CLIPBOARD EVENTS</h1>
@@ -37,6 +43,7 @@ const KeyboardClipboard = () => {
         name="area"
         id="area"
         rows="10"
+        onPaste={handleAreaPaste}
       ></textarea>
     </div>
   );
