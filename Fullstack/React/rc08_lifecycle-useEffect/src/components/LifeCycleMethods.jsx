@@ -48,7 +48,12 @@ class LifeCycleMethods extends React.Component {
     //! prevProps ve prevState degerlerini parametre olarak alabilir.
     //! ilk olarak props sonra state yaziyoruz.
     console.log("Updated");
-    console.log(prevState.count);
+    // console.log(prevState.count);
+  }
+
+  componentWillUnmount() {
+    //! 5- Bir component DOM agacindan kaldirildiktan hemen sonra cagrilir.
+    console.log("Unmounted");
   }
 
   render() {
