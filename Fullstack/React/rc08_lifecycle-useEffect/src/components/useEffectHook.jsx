@@ -6,6 +6,8 @@
 //! componentDidMount,componentDidUpdate,ve componentWillUnmount
 //! metotlarinin bir birlesimi gibi dusunulebilir.
 
+//!depandency array yoksa mount + update gibi calisir.
+
 import { useState, useEffect } from "react";
 
 //! useEffect(() => {
@@ -44,12 +46,30 @@ const UseEffectHook = () => {
 
   //? componentDidMount + componentDidUpdate
 
+  //   useEffect(() => {
+  //     console.log("mounting+updating");
+  //     setTimeout(() => {
+  //       alert("Data fetched");
+  //     }, 1000);
+  //   }, [count]);
+
+  //! array bos ise veya yok ise mount+update yapar.
+  //!sayfada herhangi bir guncelleme oldugunda calisir.
+
+  //? componentDidUnmount
+  const fetchData = () => {
+    console.log("Data fetched");
+  };
   useEffect(() => {
-    console.log("mounting+updating");
-    setTimeout(() => {
-      alert("Data fetched");
-    }, 1000);
-  }, [count]);
+    //! componentDidMount
+    const timerId = setInterval(fetchData, 1000);
+    console.log("mounting");
+    return () => {
+      //!componentWillUnmount
+      clearInterval(timerId);
+      console.log("unmounting");
+    };
+  }, []);
 
   console.log("rendering");
   return (
