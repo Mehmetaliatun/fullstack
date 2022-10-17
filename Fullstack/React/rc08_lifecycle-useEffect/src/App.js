@@ -4,12 +4,14 @@ import LifeCycleMethods from "./components/LifeCycleMethods";
 function App() {
   const [show, setShow] = useState(true);
   //! ctrl+space ile import edebiliriz.
+  // console.log(show);
   return (
     <div className="container text-center mt-4">
       <button className="btn btn-dark" onClick={() => setShow(!show)}>
-        Show/Hide
+        {show ? "Hide" : "Show"}
       </button>
-      <LifeCycleMethods />
+      {/* //! short circuit kullanildi kisaca. */}
+      {show && <LifeCycleMethods />}
     </div>
   );
 }
