@@ -31,15 +31,36 @@ import { useState, useEffect } from "react";
 //! }, [var1, var2]);
 
 const UseEffectHook = () => {
+  const [count, setCount] = useState(0);
+
+  //? componentDidMount
+  //!fetch, asyn, await, localStorage, setTimeout, setInterval();
+  //   useEffect(() => {
+  //     console.log("mounting");
+  //     setTimeout(() => {
+  //       alert("Data fetched");
+  //     }, 3000);
+  //   }, []);
+
+  //? componentDidMount + componentDidUpdate
+
   useEffect(() => {
-    //? ComponentDidMount + componentDidUpdate
+    console.log("mounting+updating");
+    setTimeout(() => {
+      alert("Data fetched");
+    }, 1000);
+  }, [count]);
 
-    return () => {
-      //? Clean-up Function(componentWillUnmount)
-    };
-  }, []); //? Dependency Array
-
-  return <div>UseEffectHook</div>;
+  console.log("rendering");
+  return (
+    <div className="container text-center">
+      <h1 className="text-danger">USE EFFECT</h1>
+      <h3>COUNT={count}</h3>
+      <button className="btn btn-info" onClick={() => setCount(count + 1)}>
+        INC
+      </button>
+    </div>
+  );
 };
 
 export default UseEffectHook;
