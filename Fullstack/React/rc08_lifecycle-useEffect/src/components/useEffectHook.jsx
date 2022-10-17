@@ -13,7 +13,7 @@ import { useState, useEffect } from "react";
 //! }, []);
 
 //! useEffect(() => {
-//*   */ componentDidUpdate code */
+//*   */ ComponentDidMount + componentDidUpdate code */
 //! }, [var1, var2]);
 
 //! useEffect(() => {
@@ -31,6 +31,14 @@ import { useState, useEffect } from "react";
 //! }, [var1, var2]);
 
 const UseEffectHook = () => {
+  useEffect(() => {
+    //? ComponentDidMount + componentDidUpdate
+
+    return () => {
+      //? Clean-up Function(componentWillUnmount)
+    };
+  }, []); //? Dependency Array
+
   return <div>UseEffectHook</div>;
 };
 
