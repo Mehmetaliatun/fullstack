@@ -14,6 +14,9 @@ const AddTutorial = () => {
     //! ikisi ayni oldugunda ayri ayri yazmaya gerek yok.
     addTutorial(newTutor);
     //! 10-bu fonk ile parametre yakalayarak gonderiyoruz
+    setTitle("");
+    setDescription("");
+    //! 11-Bunlar ile submit sonrasi silinme islemi yapiliyor.
   };
 
   //? POST - CRUD(CREATE)
