@@ -22,26 +22,16 @@ const TutorialList = ({ tutor, getTutorials }) => {
   const editTutorial = async (item) => {
     //!19-duzenleme islemi icin func olustur
 
+    const { id, title, description } = item;
+
     const url = "https://cw-axios-example.herokuapp.com/api/tutorials";
     try {
-      await axios.put(`${url}/${item.id}`);
+      await axios.put(`${url}/${id}`, { title, description });
     } catch (error) {
       console.log(error);
     }
     getTutorials();
   };
-  // const tutorials = [
-  //   {
-  //     id: 1,
-  //     title: "JS",
-  //     description: "JS is a programming language",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "React",
-  //     description: "JS library for UI design",
-  //   },
-  // ];
 
   return (
     <div className="container mt-4">
@@ -69,14 +59,21 @@ const TutorialList = ({ tutor, getTutorials }) => {
                     size={20}
                     type="button"
                     className="me-2 text-warning"
-                    onClick={() => editTutorial(item)}
+                    onClick={() =>
+                      editTutorial({
+                        id: "1057",
+                        title: "ANKARA",
+                        description: "GÜCÜ",
+                      })
+                    }
                     //*18- edit icin
+                    //! id:"1234", title:"update", description:"update"
                   />
                   <AiFillDelete
                     size={22}
                     type="button"
                     className="text-danger "
-                    onClick={() => deleteTutorial()}
+                    onClick={() => deleteTutorial(id)}
                     //!14- silme islemi icin onClick ekliyoruz ve func yolla
                     //! arrow func olmali cunku surekli render etmiyor
                   />
