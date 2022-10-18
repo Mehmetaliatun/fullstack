@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 
-const AddTutorial = () => {
+//?13- fonk yakaliyoruz
+const AddTutorial = ({ getTutorials }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
@@ -29,6 +30,9 @@ const AddTutorial = () => {
     } catch (error) {
       console.log(error);
     }
+    //?14- api'ye gonderdigimiz butun verileri burada cekiyoruz
+    //? her post islemi sonrasi bunu render ediyor.
+    getTutorials();
   };
 
   return (

@@ -16,6 +16,7 @@ const Home = () => {
     //! Havada destructure diyoruz bu isleme.
     //! API veriyi direkt data key'inin icine gonderiyor.
     try {
+      //?11-Api'ye baglan, veri cek ve guncelle
       const { data } = await axios(url);
       console.log(data);
       //! 2- async kullaninca await ile veriyi durdur ve fetch yerine axios kullan
@@ -33,7 +34,8 @@ const Home = () => {
 
   return (
     <>
-      <AddTutorial />
+      //? 12-bu metot propla gonderiyoruz
+      <AddTutorial getTutorials={getTutorials} />
       {/* <TutorialList {...tutorials} /> */}
       {/* 6- tutoriallist'e bu sekilde yollyoruz oradan props olarak alacagiz spread olarak ama bu karisik */}
       <TutorialList tutor={tutorials} />
