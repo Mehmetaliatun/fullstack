@@ -58,7 +58,7 @@ const TutorialList = ({ tutor }) => {
                     size={22}
                     type="button"
                     className="text-danger "
-                    onClick={id}
+                    onClick={deleteTutorial()}
                     //!14- silme islemi icin onClick ekliyoruz ve
                   />
                 </td>
