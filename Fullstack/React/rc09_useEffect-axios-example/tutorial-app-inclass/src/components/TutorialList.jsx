@@ -1,6 +1,7 @@
 import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import axios from "axios";
+import EditTutorial from "./EditTutorial";
 
 //? DELETE-(CRUD-Delete)
 //! tutorials ve settutorials'i buraya props olarak yolladik
@@ -58,6 +59,9 @@ const TutorialList = ({ tutor, getTutorials }) => {
                   <FaEdit
                     size={20}
                     type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#edit-modal"
+                    //*19-bu ikiliyi ekliyoruz edit icin
                     className="me-2 text-warning"
                     onClick={() =>
                       editTutorial({
@@ -83,6 +87,7 @@ const TutorialList = ({ tutor, getTutorials }) => {
           })}
         </tbody>
       </table>
+      <EditTutorial />
     </div>
   );
 };
