@@ -40,8 +40,9 @@ const Home = () => {
       <AddTutorial getTutorials={getTutorials} />
       {/* <TutorialList {...tutorials} /> */}
       {/* 6- tutoriallist'e bu sekilde yollyoruz oradan props olarak alacagiz spread olarak ama bu karisik */}
-      <TutorialList tutor={tutorials} />
+      <TutorialList tutor={tutorials} getTutorials={getTutorials} />
       {/* 7- bu mantikli olan yontem adini tutor olarak cektik ve diger tarafta bu sekilde yollaadik orada da ayni sekilde alacagiz*/}
+      {/*17- delete islemi icin getTutorials gonderiyoruz */}
     </>
   );
 };

@@ -3,29 +3,30 @@ import { AiFillDelete } from "react-icons/ai";
 import axios from "axios";
 
 //! tutorials ve settutorials'i buraya props olarak yolladik
-const TutorialList = ({ tutor }) => {
+const TutorialList = ({ tutor, getTutorials }) => {
   const deleteTutorial = async (id) => {
     //!15-silme islemi icin func olustur
     //!async ekleyip id ile silme islemi olacagi icin parametre id
     const url = "https://cw-axios-example.herokuapp.com/api/tutorials";
     try {
-      await axios.delete(url, id);
+      await axios.delete(`${url}/${id}`);
     } catch (error) {
       console.log(error);
     }
+    getTutorials();
   };
-  const tutorials = [
-    {
-      id: 1,
-      title: "JS",
-      description: "JS is a programming language",
-    },
-    {
-      id: 2,
-      title: "React",
-      description: "JS library for UI design",
-    },
-  ];
+  // const tutorials = [
+  //   {
+  //     id: 1,
+  //     title: "JS",
+  //     description: "JS is a programming language",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "React",
+  //     description: "JS library for UI design",
+  //   },
+  // ];
 
   return (
     <div className="container mt-4">
@@ -58,8 +59,9 @@ const TutorialList = ({ tutor }) => {
                     size={22}
                     type="button"
                     className="text-danger "
-                    onClick={deleteTutorial()}
-                    //!14- silme islemi icin onClick ekliyoruz ve
+                    onClick={() => deleteTutorial()}
+                    //!14- silme islemi icin onClick ekliyoruz ve func yolla
+                    //! arrow func olmali cunku surekli render etmiyor
                   />
                 </td>
               </tr>
