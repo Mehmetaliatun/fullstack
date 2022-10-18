@@ -1,10 +1,32 @@
+import axios from "axios";
 import { useState } from "react";
 
 const AddTutorial = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    //! 8- Veri gondermek icin olusturuyoruz
+    const newTutor = { title: title, description: description };
+    //****************-key  -degisken */
+    // const newTutor = { title, description };
+    //! ikisi ayni oldugunda ayri ayri yazmaya gerek yok.
+    addTutorial(newTutor);
+    //! 10-bu fonk ile parametre yakalayarak gonderiyoruz
+  };
+
+  //? POST - CRUD(CREATE)
+  const addTutorial = async (newTutor) => {
+    const url = "https://cw-axios-example.herokuapp.com/api/tutorials";
+
+    try {
+      //! 9- 1. url ikinci post data gonderme yapacagiz su an
+      await axios.post(url, newTutor);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="container text-center mt-4">
