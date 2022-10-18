@@ -1,6 +1,7 @@
 import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 
+//! tutorials ve settutorials'i buraya props olarak yolladik
 const TutorialList = ({ tutor }) => {
   const tutorials = [
     {

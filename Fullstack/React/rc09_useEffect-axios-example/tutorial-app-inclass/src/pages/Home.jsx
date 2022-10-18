@@ -30,11 +30,13 @@ const Home = () => {
   useEffect(() => {
     //! 5-Didmount yapmak icin return ve array icini siliyoruz.
     getTutorials();
+    //* bunu yapma sebebimiz tutorial ve setTutorial'i gondermek.
+    //* bunu da 12. de addTutorial icine ekliyoruz
   }, []);
 
   return (
     <>
-      //? 12-bu metot propla gonderiyoruz
+      {/* //? 12-bu metot propla gonderiyoruz */}
       <AddTutorial getTutorials={getTutorials} />
       {/* <TutorialList {...tutorials} /> */}
       {/* 6- tutoriallist'e bu sekilde yollyoruz oradan props olarak alacagiz spread olarak ama bu karisik */}
