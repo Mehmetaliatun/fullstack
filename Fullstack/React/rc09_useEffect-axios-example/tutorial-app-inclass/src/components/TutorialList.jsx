@@ -1,8 +1,19 @@
 import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
+import axios from "axios";
 
 //! tutorials ve settutorials'i buraya props olarak yolladik
 const TutorialList = ({ tutor }) => {
+  const deleteTutorial = async (id) => {
+    //!15-silme islemi icin func olustur
+    //!async ekleyip id ile silme islemi olacagi icin parametre id
+    const url = "https://cw-axios-example.herokuapp.com/api/tutorials";
+    try {
+      await axios.delete(url, id);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const tutorials = [
     {
       id: 1,
@@ -47,6 +58,8 @@ const TutorialList = ({ tutor }) => {
                     size={22}
                     type="button"
                     className="text-danger "
+                    onClick={id}
+                    //!14- silme islemi icin onClick ekliyoruz ve
                   />
                 </td>
               </tr>
