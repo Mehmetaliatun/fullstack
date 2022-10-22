@@ -18,3 +18,5 @@ export default About;
 // uygulamanın çalışması için gerekli tüm dosyaları (JavaScript, CSS vb) içerir. Sayfa veya s
 // onraki sayfalarla olan herhangi bir etkileşim için servera gidip gelmesi gerektirmez; bu d
 // a sayfanın yeniden yüklenmediği anlamına gelir.
+
+// react-rooter uygulamalarında server-side-routing (SSR) değil client-side-routing (CSR)  yapılıyor. yani ilk seferde bütün bilgiler kullanıcıya geliyor ve onun bilgisayarında parse ediliyor. Her defasında refresh olmuyor.
