@@ -26,8 +26,9 @@ const People = () => {
               key={id}
               className=" col-sm-12 col-md-6 col-lg-4"
               type="button"
-              onClick={() => navigate(`/people/${id}`)}
+              onClick={() => navigate(`/people/${id}`, { state: person })}
             >
+              {/* state olarak gondermek zorunlu! */}
               <img className="rounded" src={avatar} alt="img" />
               <h6>
                 {first_name} {last_name}
