@@ -610,7 +610,112 @@
 //   this.id == "arttir" ? (counter += 1) : (counter -= 1);
 //   counterDOM.innerHTML = counter;
 // }
-let age = 24;
-let permission = age >= 18 ? "Giriş yapabilirsiniz." : "Giriş yapamazsınız.";
+// let age = 24;
+// let permission = age >= 18 ? "Giriş yapabilirsiniz." : "Giriş yapamazsınız.";
 
-console.log(permission);
+// console.log(permission);
+
+//! LOOPS REPEAT (FOR_WHILE_DO-WHILE)
+
+// for(start;condition;amountOfUpdate){
+//     insideOfLoop
+// }
+
+//? false degerler
+//! 0_null_empty_string_false_undefined_NaN
+
+//* Ex: From 1 to n plus all numbers.
+
+// let n = +prompt("bir sayi giriniz");
+// let total = 0;
+// //! toplamlarda baslangic degeri 0 vermek en iyisi.
+// for (let i = 1; i <= n; i++) {
+//   //   total = total + i;
+//   total += i;
+// }
+// console.log(`TOTAL: ${total}`);
+
+//* Ex-2:Random 10 numbers
+
+// for (let i = 1; i <= 10; i++) {
+//   const random = Math.round(Math.random() * 100);
+//   console.log(random);
+// }
+
+//* Ex-3:
+// const numb = +prompt("enter a positive number");
+// let asal = true;
+// //! kontrol amacli true/false atiyoruz ki break kismina direkt girebilsin.
+
+// if (numb <= 1) {
+//   alert("number is bigger than 1");
+// } else {
+//   for (let i = 2; i < numb; i++) {
+//     //? i esit 2'ye; i numb'a kadar 1er artacak.
+//     if (numb % i === 0) {
+//       //? eger numb'in i'ye bolumunden kalan 0'a esit ise asal false degilse break'a giriyor.
+//       asal = false;
+//       break;
+//     }
+//   }
+//   const sonuc = asal === true ? "ASAL" : "ASAL DEGIL";
+//   //? sonuc atadik ve asal true ise asal değilse, değil.
+//   console.log(`${numb} ${sonuc} `);
+// }
+
+// const carp = 9;
+// for (let i = 1; i <= carp; i++) {
+//   table = i * carp;
+//   console.log(table);
+// }
+
+//*** WHILE */
+
+// let yas = +prompt(
+//   "Siteye girmek icin yasinizi giriniz:(18'den kucukler 25'ten buyukler giremez!)"
+// );
+// while (yas < 18 || yas > 25) {
+//   alert("18 ile 25 yas arasi sitemizi kullanabilir");
+//   yas = +prompt(
+//     "Siteye girmek icin yasinizi giriniz:(18'den kucukler 25'ten buyukler giremez!)"
+//   );
+// }
+
+//*** DO-WHILE */
+
+// let girNot;
+// do {
+//   girNot = +prompt("bir not giriniz 0-100");
+//   if (girNot < 0 || girNot > 100) {
+//     alert("not 0-100 arası olmalı");
+//   }
+// } while (girNot < 0 || girNot > 100);
+
+// console.log("girilen not", girNot);
+
+// let thmn;
+// // let rndm;
+// const rndm = Math.round(Math.random() * 100);
+// let hak = 5;
+// do {
+//   console.log(rndm);
+//   let thmn = +prompt("0-100 arasi tahmin et");
+//   if (thmn > rndm) {
+//     hak -= 1;
+//     alert("kucuk tahmin et");
+//   } else if (thmn < rndm) {
+//     hak -= 1;
+//     alert("tahmini yukselt");
+//   } else alert("dogru bildiniz");
+// } while (hak > 0);
+// } while (rndm == thmn);
+
+//******* */
+
+// let rndm = Math.round(Math.random() * 100);
+
+// let thmn= +prompt("0-100 arasi tahmin et");
+// if(thmn==rndm){
+//     alert("dogru bildiniz")
+//     for()
+// }
