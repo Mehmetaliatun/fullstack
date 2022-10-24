@@ -719,3 +719,25 @@
 //     alert("dogru bildiniz")
 //     for()
 // }
+
+//******* FUNCTIONS */
+
+// let ad = prompt("ad giriniz");
+// let soyad = prompt("soyad giriniz");
+// const greet = (ad, soyad, yas) => {
+//   console.log(
+//     `Merhaba ${ad} ${soyad} sisteme hoşgeldiniz, ${
+//       new Date().getFullYear() - yas
+//     } yasinizdasiniz`
+//   );
+
+//   return greet;
+// };
+// greet("ali", "veli", 1996);
+
+// function tekCift(sayi) {
+//   return sayi % 2 ? `${sayi} tek` : `${sayi} cift`;
+// }
+// // console.log(tekCift(4));
+// let sayi = +prompt("sayi giriniz");
+// console.log(tekCift(sayi));
