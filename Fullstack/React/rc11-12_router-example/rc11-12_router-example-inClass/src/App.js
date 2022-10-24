@@ -4,6 +4,8 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import People from "./pages/People";
 import NotFound from "./pages/NotFound";
+import FullStack from "./pages/FullStack";
+import Aws from "./pages/Aws";
 import { Link, Route, Routes, Navigate } from "react-router-dom";
 import Paths from "./pages/Paths";
 import PersonDetail from "./pages/PersonDetail";
@@ -35,7 +37,12 @@ function App() {
         <Route path="people" element={<People />} />
         <Route path="people/:id" element={<PersonDetail />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="paths" element={<Paths />} />
+        {/* NESTED ROUTE */}
+        <Route path="paths" element={<Paths />}>
+          <Route path="fullstack" element={<FullStack />} />
+          <Route path="aws" element={<Aws />} />
+        </Route>
+
         {/* <Route path="*" element={<NotFound />} /> */}
         <Route path="*" element={<Navigate to="/" />} />
         {/* ustte useNavigate veya link to kullanilamaz cunku */}
