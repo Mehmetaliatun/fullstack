@@ -8,6 +8,9 @@ import { Route, Routes } from "react-router-dom";
 import Paths from "./pages/Paths";
 import PersonDetail from "./pages/PersonDetail";
 
+//? SSR - CSR
+// react-rooter uygulamalarında server-side-routing (SSR) değil client-side-routing (CSR)  yapılıyor. yani ilk seferde bütün bilgiler kullanıcıya ham dosyalar olarak geliyor ve onun bilgisayarında parse ediliyor. Her defasında refresh olmuyor. Bir kere yüklendikten sonra hızlıca sayfa geçişi yapılabiliyor. CSR SEO açısında uygun değil, arama motorlarının işini zorlaştırıyor.  ayrıca harici kütüphaneler kullanmak gerekiyor(react-helmet gibi). CSR server üzerinden yükü alır, fakat loading-time biraz uzun olabilir.(Lazy-Loading kavramı burada devreye giriyor.)
+
 function App() {
   return (
     <>
