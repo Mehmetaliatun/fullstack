@@ -39,11 +39,13 @@ function App() {
         <Route path="contact" element={<Contact />} />
         {/* NESTED ROUTE */}
         <Route path="paths" element={<Paths />}>
-          <Route path="fullstack" element={<FullStack />} />
+          {/* <Route path="fullstack" element={<FullStack />} /> */}
+          <Route index element={<FullStack />} />
           <Route path="aws" element={<Aws />} />
         </Route>
 
         {/* <Route path="*" element={<NotFound />} /> */}
+        {/* Redirect islemleri icin Navigate componenti kullanilabilir */}
         <Route path="*" element={<Navigate to="/" />} />
         {/* ustte useNavigate veya link to kullanilamaz cunku */}
         {/* Component seviyesi icersinde hook cagrilamaz. */}

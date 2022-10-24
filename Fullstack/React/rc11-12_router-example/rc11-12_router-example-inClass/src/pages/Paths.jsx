@@ -1,6 +1,7 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Navigate, Outlet, useNavigate } from "react-router-dom";
 
 const Paths = () => {
+  const navigate = useNavigate();
   return (
     <div className="container mt-4">
       <h1>
@@ -14,12 +15,16 @@ const Paths = () => {
         experts!
       </p>
       <div>
-        <Link className="btn btn-success w-50" to="fullstack">
+        {/* <Link className="btn btn-success w-50" to="fullstack"> */}
+        <Link className="btn btn-success w-50" to="">
           Fullstack
         </Link>
-        <Link className="btn btn-warning w-50" to="aws">
+        <button
+          className="btn btn-warning w-50"
+          onClick={() => navigate("aws")}
+        >
           Aws-Devops
-        </Link>
+        </button>
       </div>
       <Outlet />
     </div>
