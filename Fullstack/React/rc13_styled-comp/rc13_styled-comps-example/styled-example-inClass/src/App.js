@@ -1,14 +1,14 @@
 import Header from "./components/Header";
 import { ThemeProvider } from "styled-components";
 
-const theme = {
+const style = {
   colors: {
     header: "#fff",
     body: "fff",
     footer: "#8A1C4A",
   },
   margins: {},
-  responsive: {},
+  responsive: "768px",
 };
 
 const App = () => {
