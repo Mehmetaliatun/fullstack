@@ -20,7 +20,7 @@ const Header = () => {
             class online with other trainees and learn coding skills with a
             highly-skilled instructor.
           </p>
-          <Button bg="#a62440">Start Your New Carier</Button>
+          <Button bg="#a62440">Start Your New Career</Button>
         </div>
         <Image src="./images/hero.jpg" />
       </Flex>

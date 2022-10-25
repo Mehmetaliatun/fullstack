@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Flex = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   gap: 2rem;
   @media (max-width: ${({ theme }) => theme.responsive}) {
     flex-direction: column;
