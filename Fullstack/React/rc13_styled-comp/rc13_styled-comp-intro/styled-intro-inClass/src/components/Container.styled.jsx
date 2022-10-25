@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Container = styled.div`
   background-color: ${({ bg }) => bg || "white"};
@@ -7,6 +7,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  padding: 1rem;
 `;
 
 export default Container;
