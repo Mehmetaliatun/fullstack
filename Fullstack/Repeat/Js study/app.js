@@ -741,3 +741,43 @@
 // // console.log(tekCift(4));
 // let sayi = +prompt("sayi giriniz");
 // console.log(tekCift(sayi));
+
+//******* ARRAYS */
+
+// const isimler = ["ali", "veli", "ahmet", "berkay", "serhat"];
+
+// console.log(isimler);
+
+// const go = isimler[2];
+// console.log(go);
+// //! burada ise dizi icinde 2. sirada bulunan indisi yazdirdik.
+// console.log(isimler[isimler.length - 1]);
+// //! burada -1 vermemizin nedeni 5 adet element var fakat 4 adet indis mevcut
+// //! bu yuzden son elemanı yazdirabilmek icin bu sekilde yapiyoruz.
+// //! son elemani bu sekilde yazdirma sebebimiz ise
+// //! dizi icine sonradan element eklenebilir olması.
+// console.log(isimler.at(-1));
+// //! ustte bulunan length metoduna alternatif olarak kullanilabilir.
+
+// const sayilar = [4, 3, 2, 1];
+// console.log(sayilar);
+
+// //? deger arttirma
+// sayilar[sayilar.length - 1]++;
+// console.log(sayilar);
+
+// const yaslar = [23, 45, 62];
+// const kisiler = ["ahmet", "can", 2022, 2016 - 1996, true, yaslar];
+
+// console.log(kisiler);
+
+//?kisiler icindeki yaslar dizisinde bulunan 62 yasini konsola yazdir.
+
+// console.log(kisiler[5][2]);
+// const yas62 = kisiler[5][2];
+// console.log(yas62);
+
+// //?kisiler icindeki yaslar dizisinde bulunan 45 yasini 1 eksilt
+
+// kisiler[5][1]--;
+// console.log(kisiler);
