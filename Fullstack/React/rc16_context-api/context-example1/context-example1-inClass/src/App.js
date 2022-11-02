@@ -8,6 +8,7 @@ import PersonDetail from "./pages/PersonDetail";
 import Login from "./pages/Login";
 import { LoginContext } from "./context/LoginContext";
 import { useState } from "react";
+import PrivateRouter from "./pages/PrivateRouter";
 
 function App() {
   //! 2
@@ -21,8 +22,11 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
 
-          <Route path="people" element={<People />} />
-          <Route path="people/:id" element={<PersonDetail />} />
+          {/* Nested bir yapi olusturduk */}
+          <Route path="people" element={<PrivateRouter />}>
+            <Route path="" element={<People />} />
+            <Route path=":id" element={<PersonDetail />} />
+          </Route>
 
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

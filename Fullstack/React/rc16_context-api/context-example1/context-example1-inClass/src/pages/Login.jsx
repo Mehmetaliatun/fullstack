@@ -4,16 +4,17 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useContext } from "react";
 import { LoginContext } from "../context/LoginContext";
-
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   //! Local State
   // const [user, setUser] = useState({ email: "", password: "" });
 
   //! 3- Consuming LoginContext (GLobal)
   const { user, setUser } = useContext(LoginContext);
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate(-1);
   };
   console.log(user);
   return (
