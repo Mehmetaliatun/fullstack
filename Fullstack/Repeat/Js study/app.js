@@ -781,3 +781,60 @@
 
 // kisiler[5][1]--;
 // console.log(kisiler);
+
+//******* FOR */
+
+// const rakamlar = [-5, 15, 22, -4, 45, 78, -25];
+// let toplam = 0;
+// for (let i = 0; i < rakamlar.length; i++) {
+//   toplam += rakamlar[i];
+// }
+// console.log(toplam);
+// const dizi = [-5, 15, 22, -4, 45, 78, -25];
+
+// const topla = (dizi) => {
+//   let neg = 0;
+//   let poz = 0;
+//   for (let i = 0; i < dizi.length; i++)
+//     if (i < 0) {
+//       neg += dizi[i];
+//     } else {
+//       poz += dizi[i];
+//     }
+//   console.log(`pozitifler ${poz}`);
+//   console.log(`negatifler ${neg}`);
+// };
+
+// topla(dizi);
+
+// const nots = [55, 77, 23, 89, 100];
+
+// let topl = 0;
+// for (let i = 0; i < nots.length; i++) {
+//   topl += nots[i];
+// }
+// console.log(Math.round(topl / nots.length));
+
+// nots.forEach((not) => {
+//   console.log(not);
+// });
+
+// let sum = 0;
+// nots.forEach((not) => (sum += not));
+// console.log(sum);
+
+// let names = ["musto", "ahmet", "Ali", "melis", "cankan", "Yaren"];
+
+// const bigNames = names.map((name) => name.toUpperCase());
+// console.log(bigNames, names);
+
+// const euro = 18.23;
+// const dolar = 18.19;
+
+// const tlPrices = [100, 150, 50, 80, 200];
+
+// const euroPrices = tlPrices.map((tl) => Number(tl / euro).toPrecision(3));
+// const dolarPrices = tlPrices.map((tl) => Number(tl / dolar).toPrecision(3));
+
+// console.log(euroPrices);
+// console.log(dolarPrices);
