@@ -36,7 +36,8 @@ function AppbarComp() {
   };
 
   return (
-    <AppBar position="static" sx={{ background: "black" }}>
+    // <AppBar position="static" sx={{ background: "black", color: "red" }}>
+    <AppBar position="static" color="secondary">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img
