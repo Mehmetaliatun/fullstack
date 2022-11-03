@@ -1,4 +1,5 @@
 // import { TextField } from "@mui/material";
+import AppbarComp from "../components/AppbarComp";
 import CardGrid from "../components/CardGrid";
 import TextFieldComp from "../components/TextFieldComp";
 import TypoButtons from "../components/TypoButtons";
@@ -6,6 +7,7 @@ import TypoButtons from "../components/TypoButtons";
 const Home = () => {
   return (
     <>
+      <AppbarComp />
       <TypoButtons />
       <TextFieldComp />
       <CardGrid />
