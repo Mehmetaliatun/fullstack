@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const Header = () => {
-  return (
-    <div className='bg-warning text-center'>Header Componenti</div>
-  )
-}
+  console.log("Render => Header Components");
 
-export default Header
+  return <div className="bg-warning text-center">Header Componenti</div>;
+};
+
+export default Header;
