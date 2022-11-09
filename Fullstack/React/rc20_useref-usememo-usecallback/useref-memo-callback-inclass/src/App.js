@@ -24,6 +24,7 @@ function App() {
   // );
 
   const filteredData = useMemo(() => {
+    console.log("useMemo run");
     return data?.filter((item) =>
       item.name.toLowerCase().includes(search.toLowerCase())
     );
