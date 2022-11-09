@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Card from "./components/Card";
+import ClearButton from "./components/ClearButton";
 import Header from "./components/Header";
 import HeaderMemo from "./components/HeaderMemo";
 
@@ -32,10 +33,15 @@ function App() {
     setSearch(text);
   };
 
-  const handleClear = () => {
+  // const handleClear = () => {
+  //   setText("");
+  //   setSearch("");
+  // };
+
+  const handleClear = useCallback(() => {
     setText("");
     setSearch("");
-  };
+  }, []);
 
   return (
     <div className="container mt-2">
@@ -62,6 +68,9 @@ function App() {
           Search
         </button>
       </div>
+      <hr />
+      <ClearButton handleClear={handleClear} />
+      <hr />
       <div className="row">
         <Card data={filteredData} />
       </div>
