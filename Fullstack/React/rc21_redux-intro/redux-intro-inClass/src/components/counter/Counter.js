@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment, reset } from "../../redux/actions/counterAction";
 const Counter = () => {
   const dispatch = useDispatch();
-  const counter = useSelector((state) => state.count.counter);
+  const { counter } = useSelector((state) => state.count);
   //! ortak yapmadan onceki hali
   // const counter = useSelector((state) => state.counter);
   // const {counter} = useSelector((state) => state);
