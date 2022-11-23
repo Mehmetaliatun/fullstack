@@ -47,9 +47,11 @@ const Firms = () => {
         Firms
       </Typography>
 
-      <Button variant="contained">NEW FIRM</Button>
+      <Button variant="contained" onClick={() => setOpen(true)}>
+        NEW FIRM
+      </Button>
 
-      <FirmModal />
+      <FirmModal open={open} setOpen={setOpen} />
 
       {firms?.length > 0 && (
         <Grid container justifyContent="center" gap={3}>
