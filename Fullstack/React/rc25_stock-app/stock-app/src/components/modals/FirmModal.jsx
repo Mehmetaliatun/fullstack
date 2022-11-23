@@ -3,10 +3,20 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { flexCenter, modalStyle } from "../../styles/globalStyle";
 import { Button, TextField } from "@mui/material";
+import useStockCalls from "../../hooks/useStockCalls";
 
 export default function FirmModal({ open, setOpen, info, setInfo }) {
+  const { postFirm, putFirm } = useStockCalls();
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (info.id) {
+      putFirm(info);
+    } else {
+      postFirm(info);
+    }
+    setOpen(false);
+    setInfo({});
   };
 
   const handleChange = (e) => {
@@ -17,7 +27,10 @@ export default function FirmModal({ open, setOpen, info, setInfo }) {
     <div>
       <Modal
         open={open}
-        onClose={() => setOpen(false)}
+        onClose={() => {
+          setOpen(false);
+          setInfo({});
+        }}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
@@ -59,7 +72,7 @@ export default function FirmModal({ open, setOpen, info, setInfo }) {
               value={info?.image || ""}
               onChange={handleChange}
             />
-            <Button type="submit" variant="contained">
+            <Button type="submit" variant="contained" size="large">
               Submit Firm
             </Button>
           </Box>

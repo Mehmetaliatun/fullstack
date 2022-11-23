@@ -52,6 +52,21 @@ const useStockCalls = () => {
 
   const postFirm = (info) => postStockData(info, "firms");
 
+  //!------------PUT CALL-------------
+
+  const putStockData = async (info, url) => {
+    try {
+      await axiosWithToken.put(`stock/${url}/${info.url}/`, info);
+      toastSuccessNotify(`${url} successfuly updated`);
+      getStockData(url);
+    } catch (error) {
+      console.log(error);
+      toastErrorNotify(`${url} can not be updated`);
+    }
+  };
+
+  const putFirm = (info) => putStockData(info, "firms");
+
   return {
     postFirm,
     postStockData,
@@ -59,6 +74,8 @@ const useStockCalls = () => {
     getFirms,
     getSales,
     deleteFirm,
+    putFirm,
+    putStockData,
   };
 };
 
