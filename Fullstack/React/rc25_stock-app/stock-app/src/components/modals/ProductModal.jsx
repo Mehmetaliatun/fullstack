@@ -1,6 +1,5 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { flexCenter, modalStyle } from "../../styles/globalStyle";
 import { Button, TextField } from "@mui/material";
@@ -20,13 +19,10 @@ export default function FirmModal({ open, setOpen, info, setInfo }) {
     setInfo({});
   };
 
-  console.log(info);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInfo({ ...info, [name]: value });
   };
-
   return (
     <div>
       <Modal
@@ -39,46 +35,39 @@ export default function FirmModal({ open, setOpen, info, setInfo }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={modalStyle}>
-          <Box component="form" onSubmit={handleSubmit} sx={flexCenter}>
+          <Box sx={flexCenter} component="form" onSubmit={handleSubmit}>
             <TextField
               label="Firm Name"
               name="name"
               id="name"
               type="text"
               variant="outlined"
-              required
               value={info?.name || ""}
               onChange={handleChange}
             />
-
             <TextField
               label="Phone"
               name="phone"
               id="phone"
               type="tel"
-              required
               variant="outlined"
               value={info?.phone || ""}
               onChange={handleChange}
             />
-
             <TextField
               label="Address"
               name="address"
               id="address"
               type="text"
-              required
               variant="outlined"
               value={info?.address || ""}
               onChange={handleChange}
             />
-
             <TextField
-              label="Image"
+              label="Image Url"
               name="image"
               id="image"
               type="url"
-              required
               variant="outlined"
               value={info?.image || ""}
               onChange={handleChange}

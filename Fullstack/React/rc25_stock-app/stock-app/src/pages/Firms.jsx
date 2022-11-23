@@ -1,9 +1,13 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
+import useStockCalls from "../hooks/useStockCalls";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
 import { useSelector } from "react-redux";
 import FirmCard from "../components/FirmCard";
 import FirmModal from "../components/modals/FirmModal";
-import useStockCalls from "../hooks/useStockCalls";
+
 // import axios from "axios";
 
 // import { useDispatch, useSelector } from "react-redux";
@@ -12,13 +16,8 @@ import useStockCalls from "../hooks/useStockCalls";
 const Firms = () => {
   const { getFirms } = useStockCalls();
   const { firms } = useSelector((state) => state.stock);
-
   const [open, setOpen] = useState(false);
-  // const handleOpen = () => setOpen(true);
-  // const handleClose = () => setOpen(false);
-
   const [info, setInfo] = useState({});
-
   // const dispatch = useDispatch();
 
   // const { token } = useSelector((state) => state.auth);
@@ -45,18 +44,18 @@ const Firms = () => {
 
   return (
     <Box>
-      <Typography variant="h4" color="error">
+      <Typography variant="h4" color="error" mb={4}>
         Firms
       </Typography>
 
       <Button variant="contained" onClick={() => setOpen(true)}>
-        NEW FIRM
+        New Firm
       </Button>
 
       <FirmModal open={open} setOpen={setOpen} info={info} setInfo={setInfo} />
 
       {firms?.length > 0 && (
-        <Grid container justifyContent="center" gap={3}>
+        <Grid container justifyContent="center" gap={3} mt={3}>
           {firms?.map((firm) => (
             <Grid item key={firm.id}>
               <FirmCard firm={firm} setOpen={setOpen} setInfo={setInfo} />
