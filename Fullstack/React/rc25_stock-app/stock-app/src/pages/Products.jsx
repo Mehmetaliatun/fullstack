@@ -24,6 +24,7 @@ const Products = () => {
   const [open, setOpen] = useState(false);
   const [info, setInfo] = useState({});
   const [selectedBrands, setSelectedBrands] = useState([]);
+  const [selectedProducts, setSelectedProducts] = useState([]);
 
   useEffect(() => {
     getBrands();
@@ -52,9 +53,11 @@ const Products = () => {
   const isProductSelected = (item) =>
     selectedProducts.includes(item.name) || selectedProducts.length === 0;
 
-  const filteredProducts = products
+  //? products dizisinden secilmis brand'larin product name'lerini bir diziye saklar
+  const filtredProducts = products
     ?.filter((item) => selectedBrands?.includes(item.brand))
     .map((item) => item.name);
+
   // //? Siralanacak local state (sutun verilerinin local state hali)
   // const [sortedProducts, setSortedProducts] = useState(products);
 
@@ -116,10 +119,10 @@ const Products = () => {
           ))}
         </MultiSelectBox>
         <MultiSelectBox
-          handleSelect={(item) => setSelectedBrands(item)}
+          handleSelect={(item) => setSelectedProducts(item)}
           placeholder="Select Product"
         >
-          {filteredProducts?.map((item) => (
+          {filtredProducts?.map((item) => (
             <MultiSelectBoxItem key={item} value={item} text={item} />
           ))}
         </MultiSelectBox>
