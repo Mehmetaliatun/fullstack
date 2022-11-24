@@ -1,14 +1,19 @@
 // import { axiosWithToken } from "../service/axiosInstance";
 import { useDispatch } from "react-redux";
-import { fetchFail, fetchStart, getSuccess } from "../features/stockSlice";
-import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify";
+import {
+  fetchFail,
+  fetchStart,
+  getSuccess,
+  getProCatBrandsSuccess,
+} from "../features/stockSlice";
 import useAxios from "./useAxios";
+import { toastSuccessNotify, toastErrorNotify } from "../helper/ToastNotify";
 
 const useStockCalls = () => {
   const dispatch = useDispatch();
   const { axiosWithToken } = useAxios();
 
-  //!------------GET CALL-------------
+  //!------------- GET CALLS ----------------
   const getStockData = async (url) => {
     dispatch(fetchStart());
     try {
@@ -26,7 +31,25 @@ const useStockCalls = () => {
   const getBrands = () => getStockData("brands");
   const getProducts = () => getStockData("products");
 
-  //!------------DELETE CALL-------------
+  const getProCatBrands = async () => {
+    dispatch(fetchStart());
+    try {
+      const [products, categories, brands] = await Promise.all([
+        axiosWithToken.get("stock/products/"),
+        axiosWithToken.get("stock/categories/"),
+        axiosWithToken.get("stock/brands/"),
+      ]);
+
+      dispatch(
+        getProCatBrandsSuccess([products?.data, categories?.data, brands?.data])
+      );
+    } catch (error) {
+      console.log(error);
+      dispatch(fetchFail());
+    }
+  };
+
+  //!------------- DELETE CALLS ----------------
   const deleteStockData = async (url, id) => {
     try {
       await axiosWithToken.delete(`stock/${url}/${id}/`);
@@ -34,14 +57,14 @@ const useStockCalls = () => {
       getStockData(url);
     } catch (error) {
       console.log(error);
-      toastErrorNotify(`${url} something went wrong`);
+      toastErrorNotify(`${url} can not be deleted`);
     }
   };
 
   const deleteFirm = (id) => deleteStockData("firms", id);
-
-  //!------------POST CALL-------------
-
+  const deleteBrand = (id) => deleteStockData("brands", id);
+  const deleteProduct = (id) => deleteStockData("products", id);
+  //!------------- POST CALLS ----------------
   const postStockData = async (info, url) => {
     try {
       await axiosWithToken.post(`stock/${url}/`, info);
@@ -54,12 +77,12 @@ const useStockCalls = () => {
   };
 
   const postFirm = (info) => postStockData(info, "firms");
+  const postBrand = (info) => postStockData(info, "brands");
 
-  //!------------PUT CALL-------------
-
+  //!------------- PUT CALLS ----------------
   const putStockData = async (info, url) => {
     try {
-      await axiosWithToken.put(`stock/${url}/${info.url}/`, info);
+      await axiosWithToken.put(`stock/${url}/${info.id}/`, info);
       toastSuccessNotify(`${url} successfuly updated`);
       getStockData(url);
     } catch (error) {
@@ -69,19 +92,25 @@ const useStockCalls = () => {
   };
 
   const putFirm = (info) => putStockData(info, "firms");
+  const putBrand = (info) => putStockData(info, "brands");
 
   return {
-    postFirm,
-    postStockData,
     getStockData,
     getFirms,
     getSales,
+    getCategories,
+    getProducts,
+    getProCatBrands,
+    getBrands,
     deleteFirm,
+    deleteBrand,
+    deleteProduct,
+    postFirm,
+    postStockData,
+    postBrand,
     putFirm,
     putStockData,
-    getCategories,
-    getBrands,
-    getProducts,
+    putBrand,
   };
 };
 
