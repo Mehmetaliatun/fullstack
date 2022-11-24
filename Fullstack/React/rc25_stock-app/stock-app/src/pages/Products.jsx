@@ -17,13 +17,14 @@ import VerticalAlignBottomIcon from "@mui/icons-material/VerticalAlignBottom";
 import { useSelector } from "react-redux";
 import { arrowStyle, btnHoverStyle } from "../styles/globalStyle";
 import useSortColumn from "../hooks/useSortColumn";
+import { MultiSelectBox, MultiSelectBoxItem } from "@tremor/react";
 
 const Products = () => {
   const { getBrands, getCategories, getProducts } = useStockCalls();
-  const { products } = useSelector((state) => state.stock);
+  const { products, brands } = useSelector((state) => state.stock);
   const [open, setOpen] = useState(false);
   const [info, setInfo] = useState({});
-
+  const [selectedBrands, setSelectedBrands] = useState([]);
   useEffect(() => {
     getBrands();
     getCategories();
@@ -86,6 +87,21 @@ const Products = () => {
       <Button variant="contained" onClick={() => setOpen(true)}>
         New Product
       </Button>
+
+      <MultiSelectBox
+        handleSelect={(value) => setSelectedBrands(value)}
+        placeholder="Select Brand"
+        maxWidth="max-w-xs"
+      >
+        {brands?.map((item) => (
+          <MultiSelectBoxItem
+            key={item.name}
+            value={item.name}
+            text={item.name}
+          />
+        ))}
+      </MultiSelectBox>
+
       {/*
       <ProductModal open={open} setOpen={setOpen} info={info} setInfo={setInfo} /> */}
 
@@ -130,7 +146,7 @@ const Products = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {sortedData.map((product, index) => (
+              {sortedData?.map((product, index) => (
                 <TableRow
                   key={product.name}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
