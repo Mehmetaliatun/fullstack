@@ -1,44 +1,58 @@
-import { Avatar, Grid, Paper, Typography } from "@mui/material";
-import { Box } from "@mui/system";
-import React from "react";
+import { Grid, Paper, Typography, Avatar, Box } from "@mui/material";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PaymentsIcon from "@mui/icons-material/Payments";
-import { amber, indigo, pink } from "@mui/material/colors";
-import { flex } from "../styles/globalStyle";
+import { indigo, pink, amber } from "@mui/material/colors";
 import { useSelector } from "react-redux";
 
 const KpiCards = () => {
   const { sales, purchases } = useSelector((state) => state.stock);
+
+  // const totalSales = sales
+  //   ?.map((sale) => Number(sale.price_total))
+  //   .reduce((acc, val) => acc + val, 0);
+
+  // const totalPurchases = purchases
+  //   ?.map((purchase) => Number(purchase.price_total))
+  //   .reduce((acc, val) => acc + val, 0);
+
+  const total = (data) =>
+    data
+      ?.map((item) => Number(item.price_total))
+      .reduce((acc, val) => acc + val, 0);
+
+  const totalProfit = total(sales) - total(purchases);
+
   const data = [
     {
       title: "sales",
-      metric: "$5",
-      icon: <MonetizationOnIcon />,
+      metric: `$${total(sales) || ""}`,
+      icon: <MonetizationOnIcon sx={{ fontSize: "3rem" }} />,
       color: indigo[900],
       bgColor: indigo[100],
     },
     {
       title: "profit",
-      metric: "$5",
-      icon: <PaymentsIcon />,
+      metric: `$${totalProfit || ""}`,
+      icon: <PaymentsIcon sx={{ fontSize: "3rem" }} />,
       color: pink[900],
       bgColor: pink[100],
     },
     {
       title: "purchases",
-      metric: "$5",
-      icon: <ShoppingCartIcon />,
+      metric: `$${total(purchases) || ""}`,
+      icon: <ShoppingCartIcon sx={{ fontSize: "3rem" }} />,
       color: amber[900],
       bgColor: amber[100],
     },
   ];
+
   return (
     <Grid container justifyContent="center" alignItems="center" spacing={2}>
       {data.map((item) => (
-        <Grid item key={item.title} xs={12} sm={6} md={4}>
+        <Grid item key={item.title} sx={{ width: "300px" }}>
           <Paper sx={{ p: 2 }} elevation={10}>
-            <Box sx={flex}>
+            <Box sx={{ display: "flex" }}>
               <Avatar
                 sx={{
                   width: "4rem",
@@ -47,11 +61,11 @@ const KpiCards = () => {
                   backgroundColor: item.bgColor,
                 }}
               >
-                {item.icon}{" "}
+                {item.icon}
               </Avatar>
-              <Box>
-                <Typography variant="button">{item.title} </Typography>
-                <Typography variant="h5">{item.metric} </Typography>
+              <Box sx={{ mx: 4, flexGrow: 1 }}>
+                <Typography variant="button">{item.title}</Typography>
+                <Typography variant="h4">{item.metric}</Typography>
               </Box>
             </Box>
           </Paper>
