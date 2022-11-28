@@ -25,3 +25,13 @@ function getFullName(): void {
   return; // firstName + " " + lastName;
 }
 // console.log(getFullName().toLocaleUpperCase());
+
+let num = 4.325;
+function RoundUp(n: string | number): string {
+  if (typeof n === "number") {
+    return n.toFixed(2);
+  } else {
+    return parseFloat(n).toFixed(2);
+  }
+}
+console.log(RoundUp("6.825"));
