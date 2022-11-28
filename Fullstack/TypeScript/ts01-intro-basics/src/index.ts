@@ -47,4 +47,15 @@ type Control = "user" | "admin" | "moderator";
 
 let c = "moderator";
 
-let d = "g";
+let d: any = 5;
+
+type Person = {
+  firsName: string;
+  lastName: string;
+  age?: number;
+};
+//* optional hal almasi icin "?" koyuyoruz ve bu sayede veri gonderebiliriz.
+
+let people: Person[] = [];
+
+people.push({ firsName: "Mehmet", lastName: "Atun" });
